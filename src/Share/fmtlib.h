@@ -1,0 +1,28 @@
+﻿#pragma once
+
+#ifndef FMT_HEADER_ONLY
+#define FMT_HEADER_ONLY
+#endif
+// ycx 去掉原来老版spdlog的日志文件库路径，改为新版路径
+// #include <spdlog/fmt/bundled/format.h>
+#include <spdlog/fmt/fmt.h>
+
+namespace fmtutil
+{
+	template<typename... Args>
+	inline char* format_to(char* buffer, const char* format, const Args& ...args)
+	{
+		char* s = fmt::format_to(buffer, format, args...);
+		s[0] = '\0';
+		return s;
+	}
+
+	template<int BUFSIZE=512, typename... Args>
+	inline const char* format(const char* format, const Args& ...args)
+	{
+		thread_local static char buffer[BUFSIZE];
+		char* s = fmt::format_to(buffer, format, args...);
+		s[0] = '\0';
+		return buffer;
+	}
+}
