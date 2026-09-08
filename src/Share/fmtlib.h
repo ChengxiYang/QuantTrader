@@ -7,6 +7,25 @@
 // #include <spdlog/fmt/bundled/format.h>
 #include <spdlog/fmt/fmt.h>
 
+namespace fmt
+{
+	template <>
+	struct formatter<wtp::WTSKlinePeriod> : formatter<const char*>
+	{
+		auto format(wtp::WTSKlinePeriod period, format_context& ctx) const
+		{
+			const char* label = "unknown";
+			static constexpr const char* names[] = {"tick", "min1", "min5", "day", "week", "month"};
+			const auto idx = static_cast<int>(period);
+			if (idx >= 0 && idx < static_cast<int>(sizeof(names) / sizeof(names[0])))
+			{
+				label = names[idx];
+			}
+			return formatter<const char*>::format(label, ctx);
+		}
+	};
+}
+
 namespace fmtutil
 {
 	template<typename... Args>
