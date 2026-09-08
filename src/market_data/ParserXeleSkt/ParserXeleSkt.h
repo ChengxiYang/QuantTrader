@@ -16,7 +16,6 @@
 
 #include <boost/asio.hpp>
 #include <boost/array.hpp>
-#include <boost/asio/io_service.hpp>
 
 USING_NS_WTP;
 using namespace boost::asio;
@@ -69,9 +68,9 @@ private:
 	ip::udp::endpoint	_mcast_ep;
 	ip::udp::endpoint	_udp_ep;
 	ip::tcp::endpoint	_tcp_ep;
-	io_service			_io_service;
+	boost::asio::io_context	_io_service;
 
-	io_service::strand	_strand;
+	boost::asio::io_context::strand	_strand;
 
 	ip::udp::socket*	_udp_socket;
 

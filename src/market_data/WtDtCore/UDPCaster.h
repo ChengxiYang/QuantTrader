@@ -13,7 +13,6 @@
 #include "../Share/StdUtils.hpp"
 
 #include <boost/asio.hpp>
-#include <boost/asio/io_service.hpp>
 #include <queue>
 
 NS_WTP_BEGIN
@@ -94,7 +93,7 @@ private:
 	MulticastList	m_listFlatGroup;
 	MulticastList	m_listJsonGroup;
 	MulticastList	m_listRawGroup;
-	boost::asio::io_service		m_ioservice;
+	boost::asio::io_context		m_ioservice;
 	StdThreadPtr	m_thrdIO;
 
 	StdThreadPtr	m_thrdCast;
