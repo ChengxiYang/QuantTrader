@@ -19,14 +19,15 @@ NS_WTP_BEGIN
 //从CTP复制过来的
 typedef enum tagContractCategory
 {
-	CC_Stock,			//股票
-	CC_Future,			//期货
-	CC_FutOption,		//期货期权，商品期权是这个分类
-	CC_Combination,		//组合
-	CC_Spot,			//即期
-	CC_EFP,				//期转现
-	CC_SpotOption,		//现货期权，股指期权是这个分类
-	CC_ETFOption,		//个股期权，ETF期权是这个分类
+	CC_Stock = 0,			//股票
+	CC_ETF = 1,				//ETF
+	CC_Future = 2,			//保留兼容字段，仅用于旧代码兼容，不再参与 A 股 / ETF 流程
+	CC_FutOption = 3,		//保留兼容字段
+	CC_Combination = 4,		//组合
+	CC_Spot = 5,			//即期
+	CC_EFP = 6,				//期转现
+	CC_SpotOption = 7,		//保留兼容字段
+	CC_ETFOption = 8,		//保留兼容字段
 
 	CC_DC_Spot	= 20,	//数币现货
 	CC_DC_Swap,			//数币永续

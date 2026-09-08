@@ -72,17 +72,22 @@ public:
 
 	inline bool isOption() const
 	{
-		return (m_ccCategory == CC_FutOption || m_ccCategory == CC_ETFOption || m_ccCategory == CC_SpotOption);
+		return false;
 	}
 
 	inline bool isFuture() const
 	{
-		return m_ccCategory == CC_Future;
+		return false;
+	}
+
+	inline bool isETF() const
+	{
+		return m_ccCategory == CC_ETF;
 	}
 
 	inline bool isStock() const
 	{
-		return m_ccCategory == CC_Stock;
+		return (m_ccCategory == CC_Stock || m_ccCategory == CC_ETF);
 	}
 
 	inline double	getLotsTick() const { return m_dLotTick; }

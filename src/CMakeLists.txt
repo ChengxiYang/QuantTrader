@@ -13,42 +13,36 @@ SET(PREFIX lib)
 SET(SUFFIX .so)
 
 SET(CMAKE_CXX_STANDARD 17)
+INCLUDE_DIRECTORIES(${CMAKE_SOURCE_DIR}/compat)
 
-#basic libraries
+# Common libraries
 ADD_SUBDIRECTORY(WTSUtils)
 ADD_SUBDIRECTORY(WTSTools)
 
-#parser for quote data from the XeleSkt channel
-ADD_SUBDIRECTORY(ParserXeleSkt)
-ADD_SUBDIRECTORY(WtDataStorage)
-ADD_SUBDIRECTORY(WtDataStorageAD)
-ADD_SUBDIRECTORY(WtDtCore)
-ADD_SUBDIRECTORY(WtDtHelper)
-ADD_SUBDIRECTORY(WtDtPorter)
-ADD_SUBDIRECTORY(WtDtServo)
-#quote date processor
-ADD_SUBDIRECTORY(QuoteFactory)
+# 1. Market data and quote receiving
+ADD_SUBDIRECTORY(market_data/ParserXeleSkt)
+ADD_SUBDIRECTORY(market_data/WtDataStorage)
+ADD_SUBDIRECTORY(market_data/WtDtCore)
+ADD_SUBDIRECTORY(market_data/WtDtHelper)
+ADD_SUBDIRECTORY(market_data/WtDtPorter)
 
-#back test core library
-ADD_SUBDIRECTORY(WtBtCore)
-#back test c porter for outter libraries
-ADD_SUBDIRECTORY(WtBtPorter)
-ADD_SUBDIRECTORY(WtBtRunner)
+# 2. Strategy engine
+ADD_SUBDIRECTORY(strategy_engine/WtCore)
+ADD_SUBDIRECTORY(strategy_engine/WtCtaStraFact)
+ADD_SUBDIRECTORY(strategy_engine/WtSelStraFact)
 
-ADD_SUBDIRECTORY(TraderATP)
-ADD_SUBDIRECTORY(TraderXTP)
-ADD_SUBDIRECTORY(WtExeFact)
-ADD_SUBDIRECTORY(WtRiskMonFact)
+# 3. Trade execution
+ADD_SUBDIRECTORY(trade_execution/TraderXTP)
+ADD_SUBDIRECTORY(trade_execution/WtExeFact)
+ADD_SUBDIRECTORY(trade_execution/WtPorter)
+ADD_SUBDIRECTORY(trade_execution/WtRunner)
 
-ADD_SUBDIRECTORY(WtMsgQue)
-ADD_SUBDIRECTORY(WtCore)
-ADD_SUBDIRECTORY(WtPorter)
-ADD_SUBDIRECTORY(WtExecMon)
-ADD_SUBDIRECTORY(WtRunner)
+# 4. Strategy backtest
+ADD_SUBDIRECTORY(backtest/WtBtCore)
+ADD_SUBDIRECTORY(backtest/WtBtPorter)
+ADD_SUBDIRECTORY(backtest/WtBtRunner)
 
-ADD_SUBDIRECTORY(WtShareHelper)
-
-#strategy factories
-ADD_SUBDIRECTORY(WtCtaStraFact)
-ADD_SUBDIRECTORY(WtSelStraFact)
+# Explicitly exclude non-stock / non-ETF modules from this build
+# The old WonderTrader modules for futures, options, unrelated brokers and utility scaffolds
+# are intentionally not included in this A-share / ETF-only project.
 

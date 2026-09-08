@@ -1,5 +1,6 @@
 ﻿#pragma once
 #include <string.h>
+#include <string>
 #include "WTSMarcos.h"
 #include "../FasterLibs/tsl/robin_map.h"
 #include "../FasterLibs/tsl/robin_set.h"
@@ -34,7 +35,7 @@ struct string_hash
 		size_t seed = 131; // 31 131 1313 13131 131313 etc..
 		size_t hash = 0;
 
-		char* str = (char*)key.c_str();
+		const char* str = key.c_str();
 		while (*str)
 		{
 			hash = hash * seed + (*str++);

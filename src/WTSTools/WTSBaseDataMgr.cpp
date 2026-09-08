@@ -345,7 +345,7 @@ void parseCommodity(WTSCommodityInfo* pCommInfo, WTSVariant* jPInfo)
 	if (jPInfo->has("category"))
 		pCommInfo->setCategory((ContractCategory)jPInfo->getUInt32("category"));
 	else
-		pCommInfo->setCategory(CC_Future);
+		pCommInfo->setCategory(CC_Stock);
 
 	pCommInfo->setCoverMode((CoverMode)jPInfo->getUInt32("covermode"));
 	pCommInfo->setPriceMode((PriceMode)jPInfo->getUInt32("pricemode"));
