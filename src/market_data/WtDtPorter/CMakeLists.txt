@@ -52,8 +52,5 @@ add_custom_command(TARGET WtDtPorter POST_BUILD
 		COMMAND ${CMAKE_COMMAND} -E
 		copy ${CMAKE_BINARY_DIR}/build_${PLATFORM}/${CMAKE_BUILD_TYPE}/bin/${PREFIX}WtDataStorage${SUFFIX} ${LIBRARY_OUTPUT_PATH}/
 
-		COMMAND ${CMAKE_COMMAND} -E
-		copy ${CMAKE_BINARY_DIR}/build_${PLATFORM}/${CMAKE_BUILD_TYPE}/bin/${PREFIX}WtDataStorageAD${SUFFIX} ${LIBRARY_OUTPUT_PATH}/
-
 		COMMENT "depends modules copied")
 		

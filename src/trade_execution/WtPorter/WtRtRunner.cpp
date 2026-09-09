@@ -15,10 +15,10 @@
 #include "ExpParser.h"
 #include "ExpExecuter.h"
 
-#include "../WtCore/WtHelper.h"
-#include "../WtCore/CtaStraContext.h"
-#include "../WtCore/HftStraContext.h"
-#include "../WtCore/SelStraContext.h"
+#include "../../strategy_engine/WtCore/WtHelper.h"
+#include "../../strategy_engine/WtCore/CtaStraContext.h"
+#include "../../strategy_engine/WtCore/HftStraContext.h"
+#include "../../strategy_engine/WtCore/SelStraContext.h"
 
 #include "../WTSTools/WTSLogger.h"
 #include "../WTSUtils/WTSCfgLoader.h"

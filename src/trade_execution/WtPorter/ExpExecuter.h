@@ -1,5 +1,5 @@
 ﻿#pragma once
-#include "../WtCore/IExecCommand.h"
+#include "../../strategy_engine/WtCore/IExecCommand.h"
 
 USING_NS_WTP;
 

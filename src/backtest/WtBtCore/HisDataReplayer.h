@@ -11,7 +11,7 @@
 #include <string>
 #include <set>
 #include "HisDataMgr.h"
-#include "../WtDataStorage/DataDefine.h"
+#include "../../market_data/WtDataStorage/DataDefine.h"
 
 #include "../Includes/FasterDefs.h"
 #include "../Includes/WTSMarcos.h"

@@ -1,5 +1,5 @@
 ﻿#pragma once
-#include "../WtCore/HftStraBaseCtx.h"
+#include "../../strategy_engine/WtCore/HftStraBaseCtx.h"
 
 USING_NS_WTP;
 

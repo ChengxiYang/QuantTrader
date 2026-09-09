@@ -17,7 +17,6 @@ LINK_DIRECTORIES(${LNKS})
 ADD_LIBRARY(WtSelStraFact SHARED ${SRCS} ${HDRS})
 
 SET(LIBS
-	nlopt	
 	boost_filesystem
 	dl
 )

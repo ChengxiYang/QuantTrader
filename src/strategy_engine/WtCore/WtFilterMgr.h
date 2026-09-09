@@ -1,5 +1,6 @@
 ﻿#pragma once
 #include <string>
+#include <cstdint>
 #include "../Includes/FasterDefs.h"
 #include "../Includes/WTSMarcos.h"
 

@@ -6,6 +6,7 @@
 // ycx 去掉原来老版spdlog的日志文件库路径，改为新版路径
 // #include <spdlog/fmt/bundled/format.h>
 #include <spdlog/fmt/fmt.h>
+#include "../Includes/WTSTypes.h"
 
 namespace fmt
 {

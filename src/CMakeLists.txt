@@ -32,7 +32,12 @@ ADD_SUBDIRECTORY(strategy_engine/WtCtaStraFact)
 ADD_SUBDIRECTORY(strategy_engine/WtSelStraFact)
 
 # 3. Trade execution
-ADD_SUBDIRECTORY(trade_execution/TraderXTP)
+SET(XTP_SDK_HEADER "${CMAKE_SOURCE_DIR}/API/XTP2.2.32.2/xtp_trader_api.h")
+IF(EXISTS "${XTP_SDK_HEADER}")
+	ADD_SUBDIRECTORY(trade_execution/TraderXTP)
+ELSE()
+	MESSAGE(WARNING "XTP SDK header not found at ${XTP_SDK_HEADER}; TraderXTP module is skipped for this A-share / ETF-only build.")
+ENDIF()
 ADD_SUBDIRECTORY(trade_execution/WtExeFact)
 ADD_SUBDIRECTORY(trade_execution/WtPorter)
 ADD_SUBDIRECTORY(trade_execution/WtRunner)

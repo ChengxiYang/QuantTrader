@@ -27,6 +27,7 @@ int main(int argc, char* argv[])
 {
 	cppcli::Option opt(argc, argv);
 	auto lParam = opt("-l", "--logcfg", "logging configure filepath, logcfgbt.yaml as default", false);
+	auto cParam = opt("-c", "--config", "backtest configuration filepath, configbt.yaml as default", false);
 
 	auto hParam = opt("-h", "--help", "gain help doc", false)->asHelpParam();
 
