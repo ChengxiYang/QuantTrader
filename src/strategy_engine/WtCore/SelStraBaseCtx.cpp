@@ -22,7 +22,7 @@
 #include "../Share/decimal.h"
 #include "../Share/CodeHelper.hpp"
 
-#include "../WTSTools/WTSLogger.h"
+#include "WTSTools/WTSLogger.h"
 
 namespace rj = rapidjson;
 

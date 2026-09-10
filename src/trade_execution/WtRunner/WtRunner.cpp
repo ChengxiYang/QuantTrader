@@ -9,16 +9,16 @@
  */
 #include "WtRunner.h"
 
-#include "../WtCore/WtHelper.h"
-#include "../WtCore/CtaStraContext.h"
-#include "../WtCore/HftStraContext.h"
-#include "../WtCore/WtDiffExecuter.h"
+#include "../../strategy_engine/WtCore/WtHelper.h"
+#include "../../strategy_engine/WtCore/CtaStraContext.h"
+#include "../../strategy_engine/WtCore/HftStraContext.h"
+#include "../../strategy_engine/WtCore/WtDiffExecuter.h"
 
 #include "../Includes/WTSVariant.hpp"
 #include "../Includes/WTSContractInfo.hpp"
-#include "../WTSTools/WTSLogger.h"
-#include "../WTSUtils/WTSCfgLoader.h"
-#include "../WTSUtils/SignalHook.hpp"
+#include "../../WTSTools/WTSLogger.h"
+#include "../../WTSUtils/WTSCfgLoader.h"
+#include "../../WTSUtils/SignalHook.hpp"
 #include "../Share/StrUtil.hpp"
 
 
@@ -27,7 +27,7 @@ const char* getBinDir()
 	static std::string basePath;
 	if (basePath.empty())
 	{
-		basePath = boost::filesystem::initial_path<boost::filesystem::path>().string();
+		basePath = boost::filesystem::initial_path().string();
 
 		basePath = StrUtil::standardisePath(basePath);
 	}

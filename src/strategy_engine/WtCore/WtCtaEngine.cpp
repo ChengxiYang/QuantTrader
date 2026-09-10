@@ -25,7 +25,7 @@
 #include "../Includes/WTSRiskDef.hpp"
 #include "../Share/decimal.h"
 
-#include "../WTSTools/WTSLogger.h"
+#include "WTSTools/WTSLogger.h"
 
 #include <rapidjson/document.h>
 #include <rapidjson/prettywriter.h>

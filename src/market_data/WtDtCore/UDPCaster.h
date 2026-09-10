@@ -93,7 +93,7 @@ private:
 	MulticastList	m_listFlatGroup;
 	MulticastList	m_listJsonGroup;
 	MulticastList	m_listRawGroup;
-	boost::asio::io_context		m_ioservice;
+	boost::asio::io_context		_io_context;
 	StdThreadPtr	m_thrdIO;
 
 	StdThreadPtr	m_thrdCast;

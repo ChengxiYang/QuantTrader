@@ -10,7 +10,7 @@
 
 #include "WtRunner.h"
 
-#include "../WTSTools/WTSLogger.h"
+#include "../../WTSTools/WTSLogger.h"
 
 #include "../Share/cppcli.hpp"
 
@@ -19,7 +19,8 @@
 int main(int argc, char* argv[])
 {
 	cppcli::Option opt(argc, argv);
-	auto lParam = opt("-l", "--logcfg", "logging configure filepath, logcfgbt.yaml as default", false);
+	auto lParam = opt("-l", "--logcfg", "logging configuration filepath, logcfg.yaml as default", false);
+	auto cParam = opt("-c", "--config", "configuration filepath, config.yaml as default", false);
 
 	auto hParam = opt("-h", "--help", "gain help doc", false)->asHelpParam();
 
@@ -42,7 +43,8 @@ int main(int argc, char* argv[])
 	else
 		filename = "./config.yaml";
 
-	runner.config(filename);
+	if (!runner.config(filename))
+		return 1;
 
 	runner.run(false);
 	return 0;

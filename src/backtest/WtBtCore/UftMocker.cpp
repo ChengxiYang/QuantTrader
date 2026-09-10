@@ -20,7 +20,7 @@
 #include "../Share/TimeUtils.hpp"
 #include "../Share/StrUtil.hpp"
 
-#include "../WTSTools/WTSLogger.h"
+#include "WTSTools/WTSLogger.h"
 
 extern uint32_t makeLocalOrderID();
 

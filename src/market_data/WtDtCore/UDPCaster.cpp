@@ -15,8 +15,8 @@
 #include "../Includes/WTSContractInfo.hpp"
 #include "../Includes/WTSVariant.hpp"
 
-#include "../WTSTools/WTSBaseDataMgr.h"
-#include "../WTSTools/WTSLogger.h"
+#include "WTSTools/WTSBaseDataMgr.h"
+#include "WTSTools/WTSLogger.h"
 
 
 #define UDP_MSG_SUBSCRIBE	0x100
@@ -102,14 +102,14 @@ void UDPCaster::start(int sport)
 {
 	if (!m_listFlatRecver.empty() || !m_listJsonRecver.empty() || !m_listRawRecver.empty())
 	{
-		m_sktBroadcast.reset(new UDPSocket(m_ioservice, boost::asio::ip::udp::endpoint(boost::asio::ip::udp::v4(), 0)));
+		m_sktBroadcast.reset(new UDPSocket(_io_context, boost::asio::ip::udp::endpoint(boost::asio::ip::udp::v4(), 0)));
 		boost::asio::socket_base::broadcast option(true);
 		m_sktBroadcast->set_option(option);
 	}
 
 	try
 	{
-		m_sktSubscribe.reset(new UDPSocket(m_ioservice, boost::asio::ip::udp::endpoint(boost::asio::ip::udp::v4(), sport)));
+		m_sktSubscribe.reset(new UDPSocket(_io_context, boost::asio::ip::udp::endpoint(boost::asio::ip::udp::v4(), sport)));
 	}
 	catch(...)
 	{
@@ -121,11 +121,11 @@ void UDPCaster::start(int sport)
 	m_thrdIO.reset(new StdThread([this](){
 		try
 		{
-			m_ioservice.run();
+			_io_context.run();
 		}
 		catch(...)
 		{
-			m_ioservice.stop();
+			_io_context.stop();
 		}
 	}));
 }
@@ -133,7 +133,7 @@ void UDPCaster::start(int sport)
 void UDPCaster::stop()
 {
 	m_bTerminated = true;
-	m_ioservice.stop();
+	_io_context.stop();
 	if (m_thrdIO)
 		m_thrdIO->join();
 
@@ -247,7 +247,7 @@ bool UDPCaster::addMRecver(const char* remote, int port, int sendport, int type 
 	{
 		boost::asio::ip::address_v4 addr = boost::asio::ip::make_address_v4(remote);
 		UDPReceiverPtr item(new UDPReceiver(EndPoint(addr, port), type));
-		UDPSocketPtr sock(new UDPSocket(m_ioservice, boost::asio::ip::udp::endpoint(boost::asio::ip::udp::v4(), sendport)));
+		UDPSocketPtr sock(new UDPSocket(_io_context, boost::asio::ip::udp::endpoint(boost::asio::ip::udp::v4(), sendport)));
 		boost::asio::ip::multicast::join_group option(item->_ep.address());
 		sock->set_option(option);
 		if(type == 0)

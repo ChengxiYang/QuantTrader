@@ -18,8 +18,8 @@
 #include "../WtDtCore/IndexFactory.h"
 #include "../WtDtCore/ShmCaster.h"
 
-#include "../WTSTools/WTSHotMgr.h"
-#include "../WTSTools/WTSBaseDataMgr.h"
+#include "WTSTools/WTSHotMgr.h"
+#include "WTSTools/WTSBaseDataMgr.h"
 
 #include <boost/asio.hpp>
 
@@ -81,7 +81,7 @@ private:
 
 	WTSBaseDataMgr	_bd_mgr;
 	WTSHotMgr		_hot_mgr;
-	boost::asio::io_context _async_io;
+	boost::asio::io_context _io_context;
 	StateMonitor	_state_mon;
 	UDPCaster		_udp_caster;
 	ShmCaster		_shm_caster;

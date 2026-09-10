@@ -20,7 +20,7 @@ SET(LIBS
 IF(MSVC)
 ELSE(GNUCC)
 	LIST(APPEND LIBS
-		boost_filesystem
+		Boost::filesystem
 		pthread
 		dl)
 	if(WIN32)

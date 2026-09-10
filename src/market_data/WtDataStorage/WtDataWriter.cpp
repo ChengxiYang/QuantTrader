@@ -11,7 +11,7 @@
 #include "../Share/TimeUtils.hpp"
 
 #include "../Includes/IBaseDataMgr.h"
-#include "../WTSUtils/WTSCmpHelper.hpp"
+#include "WTSUtils/WTSCmpHelper.hpp"
 
 #include <set>
 #include <algorithm>

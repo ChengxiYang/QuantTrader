@@ -11,7 +11,7 @@
 #include "WtDtRunner.h"
 
 #include "../WtDtCore/WtHelper.h"
-#include "../WTSTools/WTSLogger.h"
+#include "WTSTools/WTSLogger.h"
 
 #include "../Share/ModuleHelper.hpp"
 #include "../Includes/WTSVersion.h"

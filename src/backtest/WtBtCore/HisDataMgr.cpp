@@ -2,7 +2,7 @@
 #include "WtHelper.h"
 #include "../Share/DLLHelper.hpp"
 #include "../Includes/WTSVariant.hpp"
-#include "../WTSTools/WTSLogger.h"
+#include "WTSTools/WTSLogger.h"
 
 void HisDataMgr::reader_log(WTSLogLevel ll, const char* message)
 {

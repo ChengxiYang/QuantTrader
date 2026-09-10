@@ -13,7 +13,7 @@
 #include "../Includes/WTSVariant.hpp"
 #include "../Share/TimeUtils.hpp"
 #include "../Share/decimal.h"
-#include "../WTSTools/WTSLogger.h"
+#include "WTSTools/WTSLogger.h"
 
 #include <boost/filesystem.hpp>
 

@@ -21,7 +21,7 @@
 #include "../Includes/WTSVariant.hpp"
 #include "../Includes/WTSContractInfo.hpp"
 
-#include "../WTSTools/WTSLogger.h"
+#include "WTSTools/WTSLogger.h"
 
 #include <rapidjson/document.h>
 #include <rapidjson/prettywriter.h>

@@ -19,7 +19,7 @@
 #include "../Includes/IBaseDataMgr.h"
 #include "../Share/decimal.h"
 
-#include "../WTSTools/WTSLogger.h"
+#include "WTSTools/WTSLogger.h"
 
 #include <rapidjson/document.h>
 #include <rapidjson/prettywriter.h>

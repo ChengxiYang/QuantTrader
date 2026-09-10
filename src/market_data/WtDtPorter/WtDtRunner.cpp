@@ -19,9 +19,9 @@
 
 #include "../Share/StrUtil.hpp"
 
-#include "../WTSUtils/WTSCfgLoader.h"
-#include "../WTSTools/WTSLogger.h"
-#include "../WTSUtils/SignalHook.hpp"
+#include "WTSUtils/WTSCfgLoader.h"
+#include "WTSTools/WTSLogger.h"
+#include "WTSUtils/SignalHook.hpp"
 
 
 WtDtRunner::WtDtRunner()
@@ -55,7 +55,7 @@ void WtDtRunner::start(bool bAsync /* = false */, bool bAlldayMode /* = false */
 			WTSLogger::info("Exit flag is {}", _to_exit);
 		});
 
-		boost::asio::post(_async_io, [this, bAlldayMode]() {
+		boost::asio::post(_io_context, [this, bAlldayMode]() {
 			if(!bAlldayMode)
 			{
 				std::this_thread::sleep_for(std::chrono::milliseconds(5));
@@ -67,7 +67,7 @@ void WtDtRunner::start(bool bAsync /* = false */, bool bAlldayMode /* = false */
 			while (!_to_exit)
 			{
 				std::this_thread::sleep_for(std::chrono::milliseconds(2));
-				_async_io.run_one();
+				_io_context.run_one();
 			}
 		});
 

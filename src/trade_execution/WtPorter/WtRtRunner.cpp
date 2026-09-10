@@ -20,9 +20,9 @@
 #include "../../strategy_engine/WtCore/HftStraContext.h"
 #include "../../strategy_engine/WtCore/SelStraContext.h"
 
-#include "../WTSTools/WTSLogger.h"
-#include "../WTSUtils/WTSCfgLoader.h"
-#include "../WTSUtils/SignalHook.hpp"
+#include "WTSTools/WTSLogger.h"
+#include "WTSUtils/WTSCfgLoader.h"
+#include "WTSUtils/SignalHook.hpp"
 
 #include "../Share/TimeUtils.hpp"
 #include "../Share/ModuleHelper.hpp"

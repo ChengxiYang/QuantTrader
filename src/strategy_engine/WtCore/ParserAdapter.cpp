@@ -21,7 +21,7 @@
 #include "../Includes/IBaseDataMgr.h"
 #include "../Includes/IHotMgr.h"
 
-#include "../WTSTools/WTSLogger.h"
+#include "WTSTools/WTSLogger.h"
 
 USING_NS_WTP;
 

@@ -9,7 +9,9 @@
  */
 #pragma once
 
-#include <boost/asio.hpp>
+#include <boost/asio/executor_work_guard.hpp>
+#include <boost/asio/io_context.hpp>
+#include <boost/asio/post.hpp>
 
 #include "../Includes/WTSMarcos.h"
 #include "../Includes/WTSObject.hpp"
@@ -62,10 +64,9 @@ private:
 	FundPublishMessage	_publisher;
 	FuncRegCallbacks	_register;
 
-	bool			_stopped;
-	boost::asio::io_context		_asyncio;
+	boost::asio::io_context		_io_context;
 	StdThreadPtr				_worker;
-	std::shared_ptr<boost::asio::executor_work_guard<boost::asio::io_context::executor_type>> _work_guard;
+	boost::asio::executor_work_guard<boost::asio::io_context::executor_type> _work_guard;
 };
 
 NS_WTP_END

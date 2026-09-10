@@ -18,8 +18,8 @@
 #include "../Share/CodeHelper.hpp"
 #include "../Share/decimal.h"
 
-#include "../WTSTools/WTSLogger.h"
-#include "../WTSTools/WTSHotMgr.h"
+#include "WTSTools/WTSLogger.h"
+#include "WTSTools/WTSHotMgr.h"
 
 #include <rapidjson/document.h>
 #include <rapidjson/prettywriter.h>

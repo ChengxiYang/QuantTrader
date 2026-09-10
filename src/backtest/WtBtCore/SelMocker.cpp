@@ -20,7 +20,7 @@
 #include "../Includes/WTSSessionInfo.hpp"
 #include "../Includes/WTSVariant.hpp"
 
-#include "../WTSTools/WTSLogger.h"
+#include "WTSTools/WTSLogger.h"
 
 #include <rapidjson/document.h>
 #include <rapidjson/prettywriter.h>

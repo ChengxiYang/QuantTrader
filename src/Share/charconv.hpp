@@ -1,5 +1,6 @@
 ﻿#pragma once
 #include <stdlib.h>
+#include <cstring>
 #include <string>
 #include <iconv.h>
 
@@ -22,8 +23,8 @@ public :
 			t_string = 0;
 		else if (0 == *utf8_string)
 		{
-			needFree = false;
-			t_string = ("");
+			needFree = true;
+			t_string = new char[1]{};
 		}
 		else if ( isPureAscii(utf8_string))
 		{
@@ -70,8 +71,8 @@ public :
 	}
 
 private :
-	char *t_string;
-	bool needFree;
+	char *t_string = nullptr;
+	bool needFree = false;
 
 	//
 	// helper utility to test if a string contains only ASCII characters
@@ -106,8 +107,8 @@ public :
 			utf8_string = 0;
 		else if (0 == *t_string)
 		{
-			utf8_string = "";
-			needFree = false;
+			utf8_string = new char[1]{};
+			needFree = true;
 		}
 		else if (isPureAscii((char *)t_string))
 		{
@@ -167,8 +168,8 @@ public :
 	}
 
 private :
-	char *utf8_string;
-	bool needFree;
+	char *utf8_string = nullptr;
+	bool needFree = false;
 
 	//
 	// helper utility to test if a string contains only ASCII characters

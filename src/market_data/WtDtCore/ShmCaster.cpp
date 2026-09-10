@@ -3,7 +3,7 @@
 #include "../Includes/WTSDataDef.hpp"
 #include "../Share/StdUtils.hpp"
 #include "../Share/BoostFile.hpp"
-#include "../WTSTools/WTSLogger.h"
+#include "WTSTools/WTSLogger.h"
 
 bool ShmCaster::init(WTSVariant* cfg)
 {

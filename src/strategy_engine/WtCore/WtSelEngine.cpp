@@ -4,7 +4,7 @@
 #include "TraderAdapter.h"
 #include "WtHelper.h"
 
-#include "../WTSTools/WTSLogger.h"
+#include "WTSTools/WTSLogger.h"
 #include "../Share/TimeUtils.hpp"
 #include "../Includes/IBaseDataMgr.h"
 #include "../Includes/IHotMgr.h"

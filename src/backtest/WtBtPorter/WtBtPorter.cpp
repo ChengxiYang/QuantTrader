@@ -15,7 +15,7 @@
 #include "../WtBtCore/SelMocker.h"
 #include "../WtBtCore/HftMocker.h"
 
-#include "../WTSTools/WTSLogger.h"
+#include "WTSTools/WTSLogger.h"
 
 #include "../Includes/WTSVersion.h"
 

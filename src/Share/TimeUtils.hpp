@@ -9,7 +9,6 @@
  */
 #pragma once
 #include <stdint.h>
-#include <sys/timeb.h>
 #include <sys/time.h>
 #include <string>
 #include <string.h>
@@ -23,9 +22,7 @@ class TimeUtils
 public:
 	static inline int64_t getLocalTimeNowOld(void)
 	{
-		thread_local static timeb now;
-		ftime(&now);
-		return now.time * 1000 + now.millitm;
+		return getLocalTimeNow();
 	}
 
 	/*

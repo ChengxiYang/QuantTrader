@@ -13,23 +13,23 @@
 
 #include "../Includes/ILogHandler.h"
 
-#include "../WtCore/EventNotifier.h"
-#include "../WtCore/CtaStrategyMgr.h"
-#include "../WtCore/HftStrategyMgr.h"
-#include "../WtCore/SelStrategyMgr.h"
+#include "../../strategy_engine/WtCore/EventNotifier.h"
+#include "../../strategy_engine/WtCore/CtaStrategyMgr.h"
+#include "../../strategy_engine/WtCore/HftStrategyMgr.h"
+#include "../../strategy_engine/WtCore/SelStrategyMgr.h"
 
-#include "../WtCore/WtCtaEngine.h"
-#include "../WtCore/WtHftEngine.h"
-#include "../WtCore/WtSelEngine.h"
-#include "../WtCore/WtLocalExecuter.h"
-#include "../WtCore/WtDistExecuter.h"
-#include "../WtCore/TraderAdapter.h"
-#include "../WtCore/ParserAdapter.h"
-#include "../WtCore/WtDtMgr.h"
-#include "../WtCore/ActionPolicyMgr.h"
+#include "../../strategy_engine/WtCore/WtCtaEngine.h"
+#include "../../strategy_engine/WtCore/WtHftEngine.h"
+#include "../../strategy_engine/WtCore/WtSelEngine.h"
+#include "../../strategy_engine/WtCore/WtLocalExecuter.h"
+#include "../../strategy_engine/WtCore/WtDistExecuter.h"
+#include "../../strategy_engine/WtCore/TraderAdapter.h"
+#include "../../strategy_engine/WtCore/ParserAdapter.h"
+#include "../../strategy_engine/WtCore/WtDtMgr.h"
+#include "../../strategy_engine/WtCore/ActionPolicyMgr.h"
 
-#include "../WTSTools/WTSHotMgr.h"
-#include "../WTSTools/WTSBaseDataMgr.h"
+#include "../../WTSTools/WTSHotMgr.h"
+#include "../../WTSTools/WTSBaseDataMgr.h"
 
 NS_WTP_BEGIN
 class WTSVariant;

@@ -21,7 +21,7 @@
 #include "../Share/decimal.h"
 #include "../Share/StrUtil.hpp"
 
-#include "../WTSTools/WTSLogger.h"
+#include "WTSTools/WTSLogger.h"
 
 #include <rapidjson/document.h>
 #include <rapidjson/prettywriter.h>

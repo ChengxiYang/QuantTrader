@@ -10,7 +10,6 @@
 + ***基础库***
   - Includes、Share、WTSUtils、WTSTools：公共数据结构、接口和工具能力
 + ***行情接收***
-  - market_data/ParserXeleSkt：行情解析
   - market_data/WtDtCore、WtDtHelper、WtDtPorter：行情接收和转发
   - market_data/WtDataStorage：行情数据存储
 + ***策略引擎***
@@ -24,3 +23,4 @@
 
 ## 说明
 本项目已按 A 股 / ETF 交易需求裁剪，旧的期货、期权、跨品种通用框架与无关扩展模块已从当前构建入口中移除。
+ParserXeleSkt 使用上期所期货行情协议，已移除；股票行情需要通过 IParserApi 接入兼容的沪深行情源。

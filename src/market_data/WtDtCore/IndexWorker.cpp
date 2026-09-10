@@ -10,7 +10,7 @@
 #include "../Share/decimal.h"
 #include "../Share/TimeUtils.hpp"
 
-#include "../WTSTools/WTSLogger.h"
+#include "WTSTools/WTSLogger.h"
 
 const char* WEIGHT_ALGS[] = 
 {

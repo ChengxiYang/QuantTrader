@@ -10,8 +10,8 @@
 #include "../Includes/IHotMgr.h"
 #include "../Includes/WTSDataDef.hpp"
 
-#include "../WTSUtils/WTSCmpHelper.hpp"
-#include "../WTSUtils/WTSCfgLoader.h"
+#include "WTSUtils/WTSCmpHelper.hpp"
+#include "WTSUtils/WTSCfgLoader.h"
 
 #include <rapidjson/document.h>
 namespace rj = rapidjson;

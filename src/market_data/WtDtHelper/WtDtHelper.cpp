@@ -13,9 +13,9 @@
 #include "../Share/BoostFile.hpp"
 
 #include "../WtDataStorage/DataDefine.h"
-#include "../WTSUtils/WTSCmpHelper.hpp"
-#include "../WTSTools/CsvHelper.h"
-#include "../WTSTools/WTSDataFactory.h"
+#include "WTSUtils/WTSCmpHelper.hpp"
+#include "WTSTools/CsvHelper.h"
+#include "WTSTools/WTSDataFactory.h"
 
 #include "../Includes/WTSDataDef.hpp"
 #include "../Includes/WTSSessionInfo.hpp"

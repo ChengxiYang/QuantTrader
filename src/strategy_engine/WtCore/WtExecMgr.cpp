@@ -4,7 +4,7 @@
 #include "../Share/decimal.h"
 #include "../Includes/WTSVariant.hpp"
 
-#include "../WTSTools/WTSLogger.h"
+#include "WTSTools/WTSLogger.h"
 
 USING_NS_WTP;
 

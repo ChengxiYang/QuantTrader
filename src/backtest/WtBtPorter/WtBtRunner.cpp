@@ -20,10 +20,10 @@
 #include "../Share/TimeUtils.hpp"
 #include "../Share/ModuleHelper.hpp"
 
-#include "../WTSTools/WTSLogger.h"
-#include "../WTSUtils/WTSCfgLoader.h"
+#include "WTSTools/WTSLogger.h"
+#include "WTSUtils/WTSCfgLoader.h"
 #include "../Includes/WTSVariant.hpp"
-#include "../WTSUtils/SignalHook.hpp"
+#include "WTSUtils/SignalHook.hpp"
 
 WtBtRunner::WtBtRunner()
 	: _cta_mocker(NULL)

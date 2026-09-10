@@ -26,8 +26,8 @@ ELSE(GNUCC)
 	LIST(APPEND LIBS
 		dl
 		pthread
-		boost_filesystem
-		boost_thread)
+		Boost::filesystem
+		Boost::thread)
 	IF(WIN32)
 		LIST(APPEND LIBS
 			ws2_32 iconv)
@@ -36,6 +36,7 @@ ENDIF()
 
 ADD_EXECUTABLE(WtRunner ${SRCS} ${HDRS})
 TARGET_LINK_LIBRARIES(WtRunner ${LIBS})
+ADD_DEPENDENCIES(WtRunner WtExeFact WtDataStorage)
 
 IF (MSVC)
 ELSE (GNUCC)
@@ -49,20 +50,18 @@ file(MAKE_DIRECTORY ${EXECUTABLE_OUTPUT_PATH}/executer/)
 
 add_custom_command(TARGET WtRunner POST_BUILD
 	COMMAND ${CMAKE_COMMAND} -E
-	copy ${CMAKE_BINARY_DIR}/build_${PLATFORM}/${CMAKE_BUILD_TYPE}/bin/${PREFIX}ParserXeleSkt${SUFFIX} ${EXECUTABLE_OUTPUT_PATH}/parsers/
+	copy_if_different $<TARGET_FILE:WtExeFact> ${EXECUTABLE_OUTPUT_PATH}/executer/
 
 	COMMAND ${CMAKE_COMMAND} -E
-	copy ${CMAKE_BINARY_DIR}/build_${PLATFORM}/${CMAKE_BUILD_TYPE}/bin/${PREFIX}WtExeFact${SUFFIX} ${EXECUTABLE_OUTPUT_PATH}/executer/
-
-	COMMAND ${CMAKE_COMMAND} -E
-	copy ${CMAKE_BINARY_DIR}/build_${PLATFORM}/${CMAKE_BUILD_TYPE}/bin/${PREFIX}WtDataStorage${SUFFIX} ${EXECUTABLE_OUTPUT_PATH}/
+	copy_if_different $<TARGET_FILE:WtDataStorage> ${EXECUTABLE_OUTPUT_PATH}/
 
 	COMMENT "depends modules copied")
 
-if(EXISTS "${CMAKE_SOURCE_DIR}/API/XTP2.2.32.2/xtp_trader_api.h")
+if(TARGET TraderXTP)
+	add_dependencies(WtRunner TraderXTP)
 	add_custom_command(TARGET WtRunner POST_BUILD
 		COMMAND ${CMAKE_COMMAND} -E
-		copy ${CMAKE_BINARY_DIR}/build_${PLATFORM}/${CMAKE_BUILD_TYPE}/bin/${PREFIX}TraderXTP${SUFFIX} ${EXECUTABLE_OUTPUT_PATH}/traders/
+		copy_if_different $<TARGET_FILE:TraderXTP> ${EXECUTABLE_OUTPUT_PATH}/traders/
 		COMMENT "copy XTP trader module")
 endif()
 

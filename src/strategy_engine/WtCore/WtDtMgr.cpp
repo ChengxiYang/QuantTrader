@@ -17,8 +17,8 @@
 #include "../Includes/WTSDataDef.hpp"
 #include "../Includes/WTSVariant.hpp"
 
-#include "../WTSTools/WTSLogger.h"
-#include "../WTSTools/WTSDataFactory.h"
+#include "WTSTools/WTSLogger.h"
+#include "WTSTools/WTSDataFactory.h"
 
 
 WTSDataFactory g_dataFact;

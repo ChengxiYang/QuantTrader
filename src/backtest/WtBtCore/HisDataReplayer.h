@@ -17,8 +17,8 @@
 #include "../Includes/WTSMarcos.h"
 #include "../Includes/WTSTypes.h"
 
-#include "../WTSTools/WTSHotMgr.h"
-#include "../WTSTools/WTSBaseDataMgr.h"
+#include "WTSTools/WTSHotMgr.h"
+#include "WTSTools/WTSBaseDataMgr.h"
 
 NS_WTP_BEGIN
 class WTSTickData;

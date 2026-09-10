@@ -25,8 +25,8 @@ ELSE(GNUCC)
 	LIST(APPEND LIBS
 		dl
 		pthread
-		boost_filesystem
-		boost_thread
+		Boost::filesystem
+		Boost::thread
 		)
 	IF(WIN32)
 		LIST(APPEND LIBS
@@ -36,6 +36,7 @@ ELSE(GNUCC)
 ENDIF()
 
 TARGET_LINK_LIBRARIES(WtDtPorter ${LIBS})
+add_dependencies(WtDtPorter WtDataStorage)
 IF (MSVC)
 ELSE (GNUCC)
 	SET_TARGET_PROPERTIES(WtDtPorter PROPERTIES
@@ -47,10 +48,7 @@ ENDIF ()
 file(MAKE_DIRECTORY ${LIBRARY_OUTPUT_PATH}/parsers/)
 add_custom_command(TARGET WtDtPorter POST_BUILD
 		COMMAND ${CMAKE_COMMAND} -E
-		copy ${CMAKE_BINARY_DIR}/build_${PLATFORM}/${CMAKE_BUILD_TYPE}/bin/${PREFIX}ParserXeleSkt${SUFFIX} ${LIBRARY_OUTPUT_PATH}/parsers/
-
-		COMMAND ${CMAKE_COMMAND} -E
-		copy ${CMAKE_BINARY_DIR}/build_${PLATFORM}/${CMAKE_BUILD_TYPE}/bin/${PREFIX}WtDataStorage${SUFFIX} ${LIBRARY_OUTPUT_PATH}/
+		copy_if_different $<TARGET_FILE:WtDataStorage> ${LIBRARY_OUTPUT_PATH}/
 
 		COMMENT "depends modules copied")
 		

@@ -2,7 +2,7 @@
 
 #include "../Share/StdUtils.hpp"
 #include "../Share/StrUtil.hpp"
-#include "../WTSTools/WTSLogger.h"
+#include "WTSTools/WTSLogger.h"
 
 #include <boost/filesystem.hpp>
 

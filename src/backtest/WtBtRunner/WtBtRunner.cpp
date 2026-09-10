@@ -15,10 +15,10 @@
 #include "../WtBtCore/UftMocker.h"
 #include "../WtBtCore/WtHelper.h"
 
-#include "../WTSTools/WTSLogger.h"
-#include "../WTSUtils/SignalHook.hpp"
+#include "WTSTools/WTSLogger.h"
+#include "WTSUtils/SignalHook.hpp"
 
-#include "../WTSUtils/WTSCfgLoader.h"
+#include "WTSUtils/WTSCfgLoader.h"
 #include "../Includes/WTSVariant.hpp"
 #include "../Share/StdUtils.hpp"
 #include "../Share/cppcli.hpp"

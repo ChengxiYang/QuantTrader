@@ -24,7 +24,7 @@ namespace rj = rapidjson;
 #include "../Share/decimal.h"
 #include "../Share/CodeHelper.hpp"
 
-#include "../WTSTools/WTSLogger.h"
+#include "WTSTools/WTSLogger.h"
 
 const char* CMP_ALG_NAMES[] =
 {

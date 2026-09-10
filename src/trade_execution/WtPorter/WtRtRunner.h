@@ -31,8 +31,8 @@
 #include "../../strategy_engine/WtCore/WtDtMgr.h"
 #include "../../strategy_engine/WtCore/ActionPolicyMgr.h"
 
-#include "../WTSTools/WTSHotMgr.h"
-#include "../WTSTools/WTSBaseDataMgr.h"
+#include "WTSTools/WTSHotMgr.h"
+#include "WTSTools/WTSBaseDataMgr.h"
 
 NS_WTP_BEGIN
 class WTSVariant;

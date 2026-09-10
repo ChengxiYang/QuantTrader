@@ -16,8 +16,8 @@
 #include "../Includes/WTSVariant.hpp"
 #include "../Share/DLLHelper.hpp"
 
-#include "../WTSTools/WTSBaseDataMgr.h"
-#include "../WTSTools/WTSLogger.h"
+#include "WTSTools/WTSBaseDataMgr.h"
+#include "WTSTools/WTSLogger.h"
 
 
 DataManager::DataManager()

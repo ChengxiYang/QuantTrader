@@ -10,9 +10,11 @@
 #pragma once
 
 #include <stdint.h>
-#include <boost/asio.hpp>
+#include <boost/asio/executor_work_guard.hpp>
+#include <boost/asio/io_context.hpp>
+#include <boost/asio/post.hpp>
 
-#include "../API/XTP2.2.32.2/xtp_trader_api.h"
+#include <xtp_trader_api.h>
 
 #include "../Includes/ITraderApi.h"
 #include "../Includes/WTSCollection.hpp"
@@ -137,7 +139,7 @@ private:
 	std::atomic<uint32_t>		_reqid;
 	std::atomic<uint32_t>		_ordref;		//报单引用
 
-	boost::asio::io_context		_asyncio;
+	boost::asio::io_context		_io_context;
 	StdThreadPtr				_thrd_worker;
 	typedef std::shared_ptr<boost::asio::executor_work_guard<boost::asio::io_context::executor_type>> BoostWorkerPtr;
 	BoostWorkerPtr				_worker;

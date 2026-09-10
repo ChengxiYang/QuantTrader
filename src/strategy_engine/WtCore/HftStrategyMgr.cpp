@@ -14,7 +14,7 @@
 #include "../Share/StrUtil.hpp"
 #include "../Share/StdUtils.hpp"
 
-#include "../WTSTools/WTSLogger.h"
+#include "WTSTools/WTSLogger.h"
 
 
 HftStrategyMgr::HftStrategyMgr()

@@ -15,9 +15,9 @@
 #include "../Includes/WTSSessionInfo.hpp"
 #include "../Includes/WTSVariant.hpp"
 
-#include "../WTSTools/WTSBaseDataMgr.h"
-#include "../WTSTools/WTSLogger.h"
-#include "../WTSUtils/WTSCfgLoader.h"
+#include "WTSTools/WTSBaseDataMgr.h"
+#include "WTSTools/WTSLogger.h"
+#include "WTSUtils/WTSCfgLoader.h"
 
 
 StateMonitor::StateMonitor()

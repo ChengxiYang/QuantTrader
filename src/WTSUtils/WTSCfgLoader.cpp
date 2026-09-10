@@ -125,7 +125,7 @@ WTSVariant* WTSCfgLoader::load_from_json(const char* content)
 	return ret;
 }
 
-#include "../WTSUtils/yamlcpp/yaml.h"
+#include "WTSUtils/yamlcpp/yaml.h"
 bool yaml_to_variant(const YAML::Node& root, WTSVariant* params)
 {
 	if (root.IsNull() && params->type() != WTSVariant::VT_Object)

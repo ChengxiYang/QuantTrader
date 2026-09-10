@@ -26,8 +26,8 @@
 #include "../Includes/WTSDataDef.hpp"
 #include "../Includes/WTSRiskDef.hpp"
 
-#include "../WTSTools/WTSLogger.h"
-#include "../WTSUtils/WTSCfgLoader.h"
+#include "WTSTools/WTSLogger.h"
+#include "WTSUtils/WTSCfgLoader.h"
 
 #include <rapidjson/document.h>
 #include <rapidjson/prettywriter.h>

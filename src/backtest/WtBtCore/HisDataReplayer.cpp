@@ -23,12 +23,12 @@
 #include "../Share/StrUtil.hpp"
 #include "../Share/TimeUtils.hpp"
 
-#include "../WTSTools/WTSLogger.h"
-#include "../WTSTools/WTSDataFactory.h"
-#include "../WTSTools/CsvHelper.h"
+#include "WTSTools/WTSLogger.h"
+#include "WTSTools/WTSDataFactory.h"
+#include "WTSTools/CsvHelper.h"
 
-#include "../WTSUtils/WTSCmpHelper.hpp"
-#include "../WTSUtils/WTSCfgLoader.h"
+#include "WTSUtils/WTSCmpHelper.hpp"
+#include "WTSUtils/WTSCfgLoader.h"
 
 #include "../Share/CodeHelper.hpp"
 
