@@ -15,11 +15,11 @@
 #include "TraderAdapter.h"
 #include "WtHelper.h"
 
-#include "../Share/decimal.h"
-#include "../Share/CodeHelper.hpp"
+#include "Share/decimal.h"
+#include "Share/CodeHelper.hpp"
 
-#include "../Includes/WTSVariant.hpp"
-#include "../Includes/WTSContractInfo.hpp"
+#include "Includes/WTSVariant.hpp"
+#include "Includes/WTSContractInfo.hpp"
 
 #include "WTSTools/WTSLogger.h"
 

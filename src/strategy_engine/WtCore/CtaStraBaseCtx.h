@@ -8,13 +8,13 @@
  * \brief 
  */
 #pragma once
-#include "../Includes/ICtaStraCtx.h"
-#include "../Includes/FasterDefs.h"
-#include "../Includes/WTSDataDef.hpp"
+#include "Includes/ICtaStraCtx.h"
+#include "Includes/FasterDefs.h"
+#include "Includes/WTSDataDef.hpp"
 
-#include "../Share/BoostFile.hpp"
-#include "../Share/fmtlib.h"
-#include "../Share/SpinMutex.hpp"
+#include "Share/BoostFile.hpp"
+#include "Share/fmtlib.h"
+#include "Share/SpinMutex.hpp"
 
 #include <unordered_map>
 

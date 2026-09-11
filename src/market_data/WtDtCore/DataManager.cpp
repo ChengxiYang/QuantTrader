@@ -13,8 +13,8 @@
 #include "WtHelper.h"
 #include "IDataCaster.h"
 
-#include "../Includes/WTSVariant.hpp"
-#include "../Share/DLLHelper.hpp"
+#include "Includes/WTSVariant.hpp"
+#include "Share/DLLHelper.hpp"
 
 #include "WTSTools/WTSBaseDataMgr.h"
 #include "WTSTools/WTSLogger.h"

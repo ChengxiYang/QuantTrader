@@ -1,11 +1,11 @@
 ﻿#include "WtBtDtReader.h"
 
-#include "../Includes/WTSVariant.hpp"
-#include "../Share/StrUtil.hpp"
+#include "Includes/WTSVariant.hpp"
+#include "Share/StrUtil.hpp"
 #include "WTSUtils/WTSCmpHelper.hpp"
 
 //By Wesley @ 2022.01.05
-#include "../Share/fmtlib.h"
+#include "Share/fmtlib.h"
 template<typename... Args>
 inline void pipe_btreader_log(IBtDtReaderSink* sink, WTSLogLevel ll, const char* format, const Args&... args)
 {

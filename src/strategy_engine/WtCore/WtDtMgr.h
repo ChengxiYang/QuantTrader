@@ -9,11 +9,11 @@
  */
 #pragma once
 #include <vector>
-#include "../Includes/IDataReader.h"
-#include "../Includes/IDataManager.h"
+#include "Includes/IDataReader.h"
+#include "Includes/IDataManager.h"
 
-#include "../Includes/FasterDefs.h"
-#include "../Includes/WTSCollection.hpp"
+#include "Includes/FasterDefs.h"
+#include "Includes/WTSCollection.hpp"
 
 NS_WTP_BEGIN
 class WTSVariant;

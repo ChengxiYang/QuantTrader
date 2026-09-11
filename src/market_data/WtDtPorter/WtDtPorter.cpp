@@ -13,8 +13,8 @@
 #include "../WtDtCore/WtHelper.h"
 #include "WTSTools/WTSLogger.h"
 
-#include "../Share/ModuleHelper.hpp"
-#include "../Includes/WTSVersion.h"
+#include "Share/ModuleHelper.hpp"
+#include "Includes/WTSVersion.h"
 
 #ifdef _WIN32
 #ifdef _WIN64

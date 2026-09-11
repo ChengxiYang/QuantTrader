@@ -16,14 +16,14 @@
 #include "TraderAdapter.h"
 #include "EventNotifier.h"
 
-#include "../Share/CodeHelper.hpp"
-#include "../Includes/WTSVariant.hpp"
-#include "../Share/TimeUtils.hpp"
-#include "../Includes/IBaseDataMgr.h"
-#include "../Includes/IHotMgr.h"
-#include "../Includes/WTSContractInfo.hpp"
-#include "../Includes/WTSRiskDef.hpp"
-#include "../Share/decimal.h"
+#include "Share/CodeHelper.hpp"
+#include "Includes/WTSVariant.hpp"
+#include "Share/TimeUtils.hpp"
+#include "Includes/IBaseDataMgr.h"
+#include "Includes/IHotMgr.h"
+#include "Includes/WTSContractInfo.hpp"
+#include "Includes/WTSRiskDef.hpp"
+#include "Share/decimal.h"
 
 #include "WTSTools/WTSLogger.h"
 

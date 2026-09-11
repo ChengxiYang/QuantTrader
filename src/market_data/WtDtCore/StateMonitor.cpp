@@ -10,10 +10,10 @@
 #include "StateMonitor.h"
 #include "DataManager.h"
 
-#include "../Share/TimeUtils.hpp"
-#include "../Includes/WTSContractInfo.hpp"
-#include "../Includes/WTSSessionInfo.hpp"
-#include "../Includes/WTSVariant.hpp"
+#include "Share/TimeUtils.hpp"
+#include "Includes/WTSContractInfo.hpp"
+#include "Includes/WTSSessionInfo.hpp"
+#include "Includes/WTSVariant.hpp"
 
 #include "WTSTools/WTSBaseDataMgr.h"
 #include "WTSTools/WTSLogger.h"

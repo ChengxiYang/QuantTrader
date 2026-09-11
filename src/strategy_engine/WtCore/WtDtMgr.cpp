@@ -11,11 +11,11 @@
 #include "WtEngine.h"
 #include "WtHelper.h"
 
-#include "../Share/StrUtil.hpp"
-#include "../Share/CodeHelper.hpp"
+#include "Share/StrUtil.hpp"
+#include "Share/CodeHelper.hpp"
 
-#include "../Includes/WTSDataDef.hpp"
-#include "../Includes/WTSVariant.hpp"
+#include "Includes/WTSDataDef.hpp"
+#include "Includes/WTSVariant.hpp"
 
 #include "WTSTools/WTSLogger.h"
 #include "WTSTools/WTSDataFactory.h"

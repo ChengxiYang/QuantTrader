@@ -11,10 +11,10 @@
 #include <memory>
 #include <boost/core/noncopyable.hpp>
 
-#include "../Includes/FasterDefs.h"
-#include "../Includes/SelStrategyDefs.h"
+#include "Includes/FasterDefs.h"
+#include "Includes/SelStrategyDefs.h"
 
-#include "../Share/DLLHelper.hpp"
+#include "Share/DLLHelper.hpp"
 
 class SelStraWrapper
 {

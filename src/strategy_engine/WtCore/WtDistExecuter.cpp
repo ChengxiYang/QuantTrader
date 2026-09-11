@@ -1,8 +1,8 @@
 ﻿#include "WtDistExecuter.h"
 
-#include "../Includes/WTSVariant.hpp"
+#include "Includes/WTSVariant.hpp"
 
-#include "../Share/decimal.h"
+#include "Share/decimal.h"
 #include "WTSTools/WTSLogger.h"
 
 USING_NS_WTP;

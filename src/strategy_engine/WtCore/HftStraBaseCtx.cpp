@@ -12,11 +12,11 @@
 #include "TraderAdapter.h"
 #include "WtHelper.h"
 
-#include "../Includes/WTSContractInfo.hpp"
-#include "../Includes/IBaseDataMgr.h"
+#include "Includes/WTSContractInfo.hpp"
+#include "Includes/IBaseDataMgr.h"
 
-#include "../Share/CodeHelper.hpp"
-#include "../Share/decimal.h"
+#include "Share/CodeHelper.hpp"
+#include "Share/decimal.h"
 
 #include "WTSTools/WTSLogger.h"
 #include "WTSTools/WTSHotMgr.h"

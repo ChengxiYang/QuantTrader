@@ -11,7 +11,7 @@
 #include <string>
 #include <unordered_map>
 
-#include "../Includes/ILogHandler.h"
+#include "Includes/ILogHandler.h"
 
 #include "../../strategy_engine/WtCore/EventNotifier.h"
 #include "../../strategy_engine/WtCore/CtaStrategyMgr.h"

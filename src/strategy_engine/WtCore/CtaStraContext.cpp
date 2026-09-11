@@ -9,11 +9,11 @@
  */
 #include "CtaStraContext.h"
 #include "WtCtaEngine.h"
-#include "../Includes/CtaStrategyDefs.h"
+#include "Includes/CtaStrategyDefs.h"
 
 #include <exception>
 
-#include "../Includes/WTSContractInfo.hpp"
+#include "Includes/WTSContractInfo.hpp"
 
 
 CtaStraContext::CtaStraContext(WtCtaEngine* engine, const char* name, int32_t slippage)

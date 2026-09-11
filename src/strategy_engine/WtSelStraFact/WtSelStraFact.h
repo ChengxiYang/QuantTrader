@@ -1,5 +1,5 @@
 ﻿#pragma once
-#include "../Includes/SelStrategyDefs.h"
+#include "Includes/SelStrategyDefs.h"
 
 USING_NS_WTP;
 

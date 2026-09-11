@@ -9,7 +9,7 @@
  */
 #include "WtHelper.h"
 
-#include "../Share/StrUtil.hpp"
+#include "Share/StrUtil.hpp"
 
 #ifdef _MSC_VER
 #include <direct.h>

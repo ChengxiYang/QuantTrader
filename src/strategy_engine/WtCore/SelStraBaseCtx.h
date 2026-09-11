@@ -8,12 +8,12 @@
 * \brief
 */
 #pragma once
-#include "../Includes/FasterDefs.h"
-#include "../Includes/ISelStraCtx.h"
-#include "../Includes/WTSDataDef.hpp"
+#include "Includes/FasterDefs.h"
+#include "Includes/ISelStraCtx.h"
+#include "Includes/WTSDataDef.hpp"
 
-#include "../Share/BoostFile.hpp"
-#include "../Share/fmtlib.h"
+#include "Share/BoostFile.hpp"
+#include "Share/fmtlib.h"
 
 NS_WTP_BEGIN
 

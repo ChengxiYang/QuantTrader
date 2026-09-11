@@ -16,13 +16,13 @@
 #include <rapidjson/prettywriter.h>
 namespace rj = rapidjson;
 
-#include "../Share/StrUtil.hpp"
-#include "../Includes/WTSContractInfo.hpp"
-#include "../Includes/WTSSessionInfo.hpp"
-#include "../Includes/IHotMgr.h"
-#include "../Includes/WTSTradeDef.hpp"
-#include "../Share/decimal.h"
-#include "../Share/CodeHelper.hpp"
+#include "Share/StrUtil.hpp"
+#include "Includes/WTSContractInfo.hpp"
+#include "Includes/WTSSessionInfo.hpp"
+#include "Includes/IHotMgr.h"
+#include "Includes/WTSTradeDef.hpp"
+#include "Share/decimal.h"
+#include "Share/CodeHelper.hpp"
 
 #include "WTSTools/WTSLogger.h"
 

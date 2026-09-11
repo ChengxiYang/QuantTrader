@@ -12,12 +12,12 @@
 
 #include "../WtDtCore/WtHelper.h"
 
-#include "../Includes/WTSSessionInfo.hpp"
-#include "../Includes/WTSVariant.hpp"
-#include "../Includes/WTSDataDef.hpp"
-#include "../Includes/WTSContractInfo.hpp"
+#include "Includes/WTSSessionInfo.hpp"
+#include "Includes/WTSVariant.hpp"
+#include "Includes/WTSDataDef.hpp"
+#include "Includes/WTSContractInfo.hpp"
 
-#include "../Share/StrUtil.hpp"
+#include "Share/StrUtil.hpp"
 
 #include "WTSUtils/WTSCfgLoader.h"
 #include "WTSTools/WTSLogger.h"

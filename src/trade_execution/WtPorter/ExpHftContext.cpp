@@ -1,6 +1,6 @@
 ﻿#include "ExpHftContext.h"
 #include "WtRtRunner.h"
-#include "../Share/StrUtil.hpp"
+#include "Share/StrUtil.hpp"
 
 extern WtRtRunner& getRunner();
 

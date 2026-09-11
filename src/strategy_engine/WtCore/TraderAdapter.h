@@ -9,12 +9,12 @@
  */
 #pragma once
 
-#include "../Includes/ExecuteDefs.h"
-#include "../Includes/FasterDefs.h"
-#include "../Includes/ITraderApi.h"
-#include "../Share/BoostFile.hpp"
-#include "../Share/StdUtils.hpp"
-#include "../Share/SpinMutex.hpp"
+#include "Includes/ExecuteDefs.h"
+#include "Includes/FasterDefs.h"
+#include "Includes/ITraderApi.h"
+#include "Share/BoostFile.hpp"
+#include "Share/StdUtils.hpp"
+#include "Share/SpinMutex.hpp"
 
 NS_WTP_BEGIN
 class WTSVariant;

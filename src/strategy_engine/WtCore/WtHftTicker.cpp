@@ -9,14 +9,14 @@
  */
 #include "WtHftTicker.h"
 #include "WtHftEngine.h"
-#include "../Includes/IDataReader.h"
+#include "Includes/IDataReader.h"
 
-#include "../Share/TimeUtils.hpp"
-#include "../Includes/WTSSessionInfo.hpp"
-#include "../Includes/WTSContractInfo.hpp"
-#include "../Includes/IBaseDataMgr.h"
-#include "../Includes/IHotMgr.h"
-#include "../Share/CodeHelper.hpp"
+#include "Share/TimeUtils.hpp"
+#include "Includes/WTSSessionInfo.hpp"
+#include "Includes/WTSContractInfo.hpp"
+#include "Includes/IBaseDataMgr.h"
+#include "Includes/IHotMgr.h"
+#include "Share/CodeHelper.hpp"
 
 #include "WTSTools/WTSLogger.h"
 

@@ -9,9 +9,9 @@
  */
 #pragma once
 #include <vector>
-#include "../Share/StdUtils.hpp"
-#include "../Includes/FasterDefs.h"
-#include "../Includes/WTSMarcos.h"
+#include "Share/StdUtils.hpp"
+#include "Includes/FasterDefs.h"
+#include "Includes/WTSMarcos.h"
 
 NS_WTP_BEGIN
 class WTSSessionInfo;

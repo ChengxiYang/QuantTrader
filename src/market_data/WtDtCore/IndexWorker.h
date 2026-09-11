@@ -1,11 +1,11 @@
 ﻿#pragma once
-#include "../Includes/WTSMarcos.h"
-#include "../Includes/WTSStruct.h"
-#include "../Includes/FasterDefs.h"
+#include "Includes/WTSMarcos.h"
+#include "Includes/WTSStruct.h"
+#include "Includes/FasterDefs.h"
 
-#include "../Share/StdUtils.hpp"
-#include "../Share/StdUtils.hpp"
-#include "../Share/SpinMutex.hpp"
+#include "Share/StdUtils.hpp"
+#include "Share/StdUtils.hpp"
+#include "Share/SpinMutex.hpp"
 
 NS_WTP_BEGIN
 class WTSVariant;

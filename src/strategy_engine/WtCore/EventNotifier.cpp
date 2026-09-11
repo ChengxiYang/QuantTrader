@@ -10,12 +10,12 @@
 #include "EventNotifier.h"
 #include "WtHelper.h"
 
-#include "../Share/TimeUtils.hpp"
-#include "../Share/DLLHelper.hpp"
+#include "Share/TimeUtils.hpp"
+#include "Share/DLLHelper.hpp"
 
-#include "../Includes/WTSTradeDef.hpp"
-#include "../Includes/WTSCollection.hpp"
-#include "../Includes/WTSVariant.hpp"
+#include "Includes/WTSTradeDef.hpp"
+#include "Includes/WTSCollection.hpp"
+#include "Includes/WTSVariant.hpp"
 
 #include "WTSTools/WTSLogger.h"
 

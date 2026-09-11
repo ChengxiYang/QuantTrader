@@ -12,8 +12,8 @@
 
 #include "../../strategy_engine/WtCore/WtHelper.h"
 #include "WTSTools/WTSLogger.h"
-#include "../Includes/WTSTradeDef.hpp"
-#include "../Includes/WTSVersion.h"
+#include "Includes/WTSTradeDef.hpp"
+#include "Includes/WTSVersion.h"
 
 #ifdef _WIN32
 #   ifdef _WIN64

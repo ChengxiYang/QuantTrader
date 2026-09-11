@@ -12,7 +12,7 @@
 #include <vector>
 #include <memory>
 #include <boost/core/noncopyable.hpp>
-#include "../Includes/IParserApi.h"
+#include "Includes/IParserApi.h"
 
 NS_WTP_BEGIN
 class WTSVariant;

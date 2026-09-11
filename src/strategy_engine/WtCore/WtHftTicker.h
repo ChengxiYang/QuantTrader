@@ -12,8 +12,8 @@
 #include <stdint.h>
 #include <atomic>
 
-#include "../Includes/WTSMarcos.h"
-#include "../Share/StdUtils.hpp"
+#include "Includes/WTSMarcos.h"
+#include "Share/StdUtils.hpp"
 
 NS_WTP_BEGIN
 class WTSSessionInfo;

@@ -9,19 +9,19 @@
  */
 #include "TraderXTP.h"
 
-#include "../Includes/IBaseDataMgr.h"
-#include "../Includes/WTSContractInfo.hpp"
-#include "../Includes/WTSSessionInfo.hpp"
-#include "../Includes/WTSTradeDef.hpp"
-#include "../Includes/WTSError.hpp"
-#include "../Includes/WTSVariant.hpp"
+#include "Includes/IBaseDataMgr.h"
+#include "Includes/WTSContractInfo.hpp"
+#include "Includes/WTSSessionInfo.hpp"
+#include "Includes/WTSTradeDef.hpp"
+#include "Includes/WTSError.hpp"
+#include "Includes/WTSVariant.hpp"
 
-#include "../Share/ModuleHelper.hpp"
+#include "Share/ModuleHelper.hpp"
 
 #include <boost/filesystem.hpp>
 
  //By Wesley @ 2022.01.05
-#include "../Share/fmtlib.h"
+#include "Share/fmtlib.h"
 template<typename... Args>
 inline void write_log(ITraderSpi* sink, WTSLogLevel ll, const char* format, const Args&... args)
 {

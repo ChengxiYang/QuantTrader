@@ -3,12 +3,12 @@
 */
 #include "WtVWapExeUnit.h"
 
-#include "../Share/TimeUtils.hpp"
-#include "../Includes/WTSVariant.hpp"
-#include "../Includes/WTSContractInfo.hpp"
-#include "../Share/decimal.h"
-#include "../Share/fmtlib.h"
-#include "../Includes/WTSSessionInfo.hpp"
+#include "Share/TimeUtils.hpp"
+#include "Includes/WTSVariant.hpp"
+#include "Includes/WTSContractInfo.hpp"
+#include "Share/decimal.h"
+#include "Share/fmtlib.h"
+#include "Includes/WTSSessionInfo.hpp"
 
 
 extern const char* FACT_NAME;

@@ -16,12 +16,12 @@
 
 #include <xtp_trader_api.h>
 
-#include "../Includes/ITraderApi.h"
-#include "../Includes/WTSCollection.hpp"
+#include "Includes/ITraderApi.h"
+#include "Includes/WTSCollection.hpp"
 
-#include "../Share/StdUtils.hpp"
-#include "../Share/DLLHelper.hpp"
-#include "../Share/WtKVCache.hpp"
+#include "Share/StdUtils.hpp"
+#include "Share/DLLHelper.hpp"
+#include "Share/WtKVCache.hpp"
 
 USING_NS_WTP;
 

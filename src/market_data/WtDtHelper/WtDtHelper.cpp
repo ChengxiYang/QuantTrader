@@ -8,17 +8,17 @@
  * \brief 
  */
 #include "WtDtHelper.h"
-#include "../Share/StrUtil.hpp"
-#include "../Share/TimeUtils.hpp"
-#include "../Share/BoostFile.hpp"
+#include "Share/StrUtil.hpp"
+#include "Share/TimeUtils.hpp"
+#include "Share/BoostFile.hpp"
 
 #include "../WtDataStorage/DataDefine.h"
 #include "WTSUtils/WTSCmpHelper.hpp"
 #include "WTSTools/CsvHelper.h"
 #include "WTSTools/WTSDataFactory.h"
 
-#include "../Includes/WTSDataDef.hpp"
-#include "../Includes/WTSSessionInfo.hpp"
+#include "Includes/WTSDataDef.hpp"
+#include "Includes/WTSSessionInfo.hpp"
 
 #include <rapidjson/document.h>
 

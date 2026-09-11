@@ -12,7 +12,7 @@
 
 #include "../../WTSTools/WTSLogger.h"
 
-#include "../Share/cppcli.hpp"
+#include "Share/cppcli.hpp"
 
 //#include <vld.h>
 

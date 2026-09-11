@@ -12,8 +12,8 @@
 
 #include "PorterDefs.h"
 
-#include "../Includes/ILogHandler.h"
-#include "../Includes/IDataReader.h"
+#include "Includes/ILogHandler.h"
+#include "Includes/IDataReader.h"
 
 #include "../../strategy_engine/WtCore/EventNotifier.h"
 #include "../../strategy_engine/WtCore/CtaStrategyMgr.h"

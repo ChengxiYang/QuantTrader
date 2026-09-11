@@ -13,13 +13,13 @@
 #include "WtHelper.h"
 #include "IndexFactory.h"
 
-#include "../Share/StrUtil.hpp"
-#include "../Share/DLLHelper.hpp"
+#include "Share/StrUtil.hpp"
+#include "Share/DLLHelper.hpp"
 
-#include "../Includes/WTSVariant.hpp"
-#include "../Includes/WTSContractInfo.hpp"
-#include "../Includes/WTSDataDef.hpp"
-#include "../Includes/WTSVariant.hpp"
+#include "Includes/WTSVariant.hpp"
+#include "Includes/WTSContractInfo.hpp"
+#include "Includes/WTSDataDef.hpp"
+#include "Includes/WTSVariant.hpp"
 
 #include "WTSTools/WTSBaseDataMgr.h"
 #include "WTSTools/WTSLogger.h"

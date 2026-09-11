@@ -4,10 +4,10 @@
 
 #include "DataDefine.h"
 
-#include "../Includes/FasterDefs.h"
-#include "../Includes/IDataReader.h"
+#include "Includes/FasterDefs.h"
+#include "Includes/IDataReader.h"
 
-#include "../Share/BoostMappingFile.hpp"
+#include "Share/BoostMappingFile.hpp"
 
 NS_WTP_BEGIN
 

@@ -4,11 +4,11 @@
 
 #include "DataDefine.h"
 
-#include "../Includes/FasterDefs.h"
-#include "../Includes/IBtDtReader.h"
+#include "Includes/FasterDefs.h"
+#include "Includes/IBtDtReader.h"
 
-#include "../Share/BoostMappingFile.hpp"
-#include "../Share/StdUtils.hpp"
+#include "Share/BoostMappingFile.hpp"
+#include "Share/StdUtils.hpp"
 
 NS_WTP_BEGIN
 class WTSVariant;

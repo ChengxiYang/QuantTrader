@@ -1,5 +1,5 @@
 ﻿#pragma once
-#include "../Includes/WTSStruct.h"
+#include "Includes/WTSStruct.h"
 
 USING_NS_WTP;
 

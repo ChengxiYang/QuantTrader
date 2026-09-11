@@ -1,9 +1,9 @@
 ﻿#include "IndexFactory.h"
 #include "DataManager.h"
-#include "../Includes/WTSVariant.hpp"
-#include "../Includes/WTSDataDef.hpp"
-#include "../Includes/WTSContractInfo.hpp"
-#include "../Share/StrUtil.hpp"
+#include "Includes/WTSVariant.hpp"
+#include "Includes/WTSDataDef.hpp"
+#include "Includes/WTSContractInfo.hpp"
+#include "Share/StrUtil.hpp"
 
 bool IndexFactory::init(WTSVariant* config, IHotMgr* hotMgr, IBaseDataMgr* bdMgr, DataManager* dataMgr)
 {

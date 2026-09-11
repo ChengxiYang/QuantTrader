@@ -9,8 +9,8 @@
  */
 #pragma once
 #include "IDataCaster.h"
-#include "../Includes/WTSObject.hpp"
-#include "../Share/StdUtils.hpp"
+#include "Includes/WTSObject.hpp"
+#include "Share/StdUtils.hpp"
 
 #include <boost/asio.hpp>
 #include <queue>

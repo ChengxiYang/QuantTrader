@@ -11,8 +11,8 @@
 #include <memory>
 #include <boost/core/noncopyable.hpp>
 
-#include "../Includes/FasterDefs.h"
-#include "../Includes/IParserApi.h"
+#include "Includes/FasterDefs.h"
+#include "Includes/IParserApi.h"
 
 
 NS_WTP_BEGIN

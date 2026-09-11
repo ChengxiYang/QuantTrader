@@ -9,8 +9,8 @@
  */
 #include "WtHelper.h"
 
-#include "../Share/StrUtil.hpp"
-#include "../Share/StdUtils.hpp"
+#include "Share/StrUtil.hpp"
+#include "Share/StdUtils.hpp"
 
 #include <boost/filesystem.hpp>
 

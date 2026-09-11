@@ -11,20 +11,20 @@
 #include "WtDtMgr.h"
 #include "WtHelper.h"
 
-#include "../Share/TimeUtils.hpp"
-#include "../Share/StrUtil.hpp"
-#include "../Share/decimal.h"
-#include "../Share/CodeHelper.hpp"
+#include "Share/TimeUtils.hpp"
+#include "Share/StrUtil.hpp"
+#include "Share/decimal.h"
+#include "Share/CodeHelper.hpp"
 
-#include "../Includes/IBaseDataMgr.h"
-#include "../Includes/IHotMgr.h"
+#include "Includes/IBaseDataMgr.h"
+#include "Includes/IHotMgr.h"
 
-#include "../Includes/WTSContractInfo.hpp"
-#include "../Includes/WTSSessionInfo.hpp"
-#include "../Includes/WTSVariant.hpp"
+#include "Includes/WTSContractInfo.hpp"
+#include "Includes/WTSSessionInfo.hpp"
+#include "Includes/WTSVariant.hpp"
 
-#include "../Includes/WTSDataDef.hpp"
-#include "../Includes/WTSRiskDef.hpp"
+#include "Includes/WTSDataDef.hpp"
+#include "Includes/WTSRiskDef.hpp"
 
 #include "WTSTools/WTSLogger.h"
 #include "WTSUtils/WTSCfgLoader.h"

@@ -9,8 +9,8 @@
 */
 #include "SelStrategyMgr.h"
 
-#include "../Share/StrUtil.hpp"
-#include "../Share/StdUtils.hpp"
+#include "Share/StrUtil.hpp"
+#include "Share/StdUtils.hpp"
 
 #include "WTSTools/WTSLogger.h"
 

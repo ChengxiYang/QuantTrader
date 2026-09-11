@@ -9,10 +9,10 @@
  */
 #pragma once
 
-#include "../Includes/FasterDefs.h"
-#include "../Includes/IHftStraCtx.h"
-#include "../Share/BoostFile.hpp"
-#include "../Share/fmtlib.h"
+#include "Includes/FasterDefs.h"
+#include "Includes/IHftStraCtx.h"
+#include "Share/BoostFile.hpp"
+#include "Share/fmtlib.h"
 
 #include <boost/circular_buffer.hpp>
 

@@ -8,12 +8,12 @@
  */
 #include "WtDiffMinImpactExeUnit.h"
 
-#include "../Includes/WTSVariant.hpp"
-#include "../Includes/WTSContractInfo.hpp"
-#include "../Includes/WTSSessionInfo.hpp"
-#include "../Share/decimal.h"
-#include "../Share/StrUtil.hpp"
-#include "../Share/fmtlib.h"
+#include "Includes/WTSVariant.hpp"
+#include "Includes/WTSContractInfo.hpp"
+#include "Includes/WTSSessionInfo.hpp"
+#include "Share/decimal.h"
+#include "Share/StrUtil.hpp"
+#include "Share/fmtlib.h"
 
 extern const char* FACT_NAME;
 

@@ -1,16 +1,16 @@
 ﻿#include "WtStraDualThrust.h"
 
-#include "../Includes/ICtaStraCtx.h"
+#include "Includes/ICtaStraCtx.h"
 
-#include "../Includes/WTSContractInfo.hpp"
-#include "../Includes/WTSVariant.hpp"
-#include "../Includes/WTSDataDef.hpp"
-#include "../Share/decimal.h"
+#include "Includes/WTSContractInfo.hpp"
+#include "Includes/WTSVariant.hpp"
+#include "Includes/WTSDataDef.hpp"
+#include "Share/decimal.h"
 
 extern const char* FACT_NAME;
 
 //By Wesley @ 2022.01.05
-#include "../Share/fmtlib.h"
+#include "Share/fmtlib.h"
 
 WtStraDualThrust::WtStraDualThrust(const char* id)
 	: CtaStrategy(id)

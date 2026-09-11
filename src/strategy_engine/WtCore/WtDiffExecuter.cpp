@@ -12,12 +12,12 @@
 #include "WtEngine.h"
 #include "WtHelper.h"
 
-#include "../Share/CodeHelper.hpp"
-#include "../Includes/IDataManager.h"
-#include "../Includes/WTSVariant.hpp"
-#include "../Includes/IHotMgr.h"
-#include "../Includes/IBaseDataMgr.h"
-#include "../Share/decimal.h"
+#include "Share/CodeHelper.hpp"
+#include "Includes/IDataManager.h"
+#include "Includes/WTSVariant.hpp"
+#include "Includes/IHotMgr.h"
+#include "Includes/IBaseDataMgr.h"
+#include "Share/decimal.h"
 
 #include "WTSTools/WTSLogger.h"
 

@@ -1,8 +1,8 @@
 ﻿#include "WtExecMgr.h"
 #include "WtFilterMgr.h"
 
-#include "../Share/decimal.h"
-#include "../Includes/WTSVariant.hpp"
+#include "Share/decimal.h"
+#include "Includes/WTSVariant.hpp"
 
 #include "WTSTools/WTSLogger.h"
 

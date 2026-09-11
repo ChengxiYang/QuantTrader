@@ -8,8 +8,8 @@
  * \brief 
  */
 #pragma once
-#include "../Includes/ICtaStraCtx.h"
-#include "../Share/threadpool.hpp"
+#include "Includes/ICtaStraCtx.h"
+#include "Share/threadpool.hpp"
 #include "WtExecMgr.h"
 #include "WtEngine.h"
 

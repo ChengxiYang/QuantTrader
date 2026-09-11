@@ -13,9 +13,9 @@
 #include <boost/asio/io_context.hpp>
 #include <boost/asio/post.hpp>
 
-#include "../Includes/WTSMarcos.h"
-#include "../Includes/WTSObject.hpp"
-#include "../Share/StdUtils.hpp"
+#include "Includes/WTSMarcos.h"
+#include "Includes/WTSObject.hpp"
+#include "Share/StdUtils.hpp"
 
 typedef unsigned long(*FuncCreateMQServer)(const char*);
 typedef void(*FuncDestroyMQServer)(unsigned long);

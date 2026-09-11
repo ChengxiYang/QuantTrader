@@ -9,9 +9,9 @@
  */
 #pragma once
 
-#include "../Includes/IDataWriter.h"
-#include "../Share/StdUtils.hpp"
-#include "../Share/BoostMappingFile.hpp"
+#include "Includes/IDataWriter.h"
+#include "Share/StdUtils.hpp"
+#include "Share/BoostMappingFile.hpp"
 
 NS_WTP_BEGIN
 class WTSTickData;

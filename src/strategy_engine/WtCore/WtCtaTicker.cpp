@@ -9,15 +9,15 @@
  */
 #include "WtCtaTicker.h"
 #include "WtCtaEngine.h"
-#include "../Includes/IDataReader.h"
+#include "Includes/IDataReader.h"
 
-#include "../Share/CodeHelper.hpp"
-#include "../Share/TimeUtils.hpp"
-#include "../Includes/WTSSessionInfo.hpp"
-#include "../Includes/WTSDataDef.hpp"
-#include "../Includes/IBaseDataMgr.h"
-#include "../Includes/IHotMgr.h"
-#include "../Includes/WTSContractInfo.hpp"
+#include "Share/CodeHelper.hpp"
+#include "Share/TimeUtils.hpp"
+#include "Includes/WTSSessionInfo.hpp"
+#include "Includes/WTSDataDef.hpp"
+#include "Includes/IBaseDataMgr.h"
+#include "Includes/IHotMgr.h"
+#include "Includes/WTSContractInfo.hpp"
 
 #include "WTSTools/WTSLogger.h"
 

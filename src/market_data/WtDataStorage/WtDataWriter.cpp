@@ -1,23 +1,23 @@
 ﻿#include "WtDataWriter.h"
 
-#include "../Includes/WTSSessionInfo.hpp"
-#include "../Includes/WTSContractInfo.hpp"
-#include "../Includes/WTSDataDef.hpp"
-#include "../Includes/WTSVariant.hpp"
-#include "../Share/BoostFile.hpp"
-#include "../Share/StrUtil.hpp"
-#include "../Share/IniHelper.hpp"
-#include "../Share/decimal.h"
-#include "../Share/TimeUtils.hpp"
+#include "Includes/WTSSessionInfo.hpp"
+#include "Includes/WTSContractInfo.hpp"
+#include "Includes/WTSDataDef.hpp"
+#include "Includes/WTSVariant.hpp"
+#include "Share/BoostFile.hpp"
+#include "Share/StrUtil.hpp"
+#include "Share/IniHelper.hpp"
+#include "Share/decimal.h"
+#include "Share/TimeUtils.hpp"
 
-#include "../Includes/IBaseDataMgr.h"
+#include "Includes/IBaseDataMgr.h"
 #include "WTSUtils/WTSCmpHelper.hpp"
 
 #include <set>
 #include <algorithm>
 
 //By Wesley @ 2022.01.05
-#include "../Share/fmtlib.h"
+#include "Share/fmtlib.h"
 template<typename... Args>
 inline void pipe_writer_log(IDataWriterSink* sink, WTSLogLevel ll, const char* format, const Args&... args)
 {

@@ -3,15 +3,15 @@
 23.6.2--zhaoyk--StockVWAP
 */
 #include "WtOrdMon.h"
-#include "../Includes/ExecuteDefs.h"
-#include "../Share/StrUtil.hpp"
+#include "Includes/ExecuteDefs.h"
+#include "Share/StrUtil.hpp"
 #include <fstream>
-#include "../Share/TimeUtils.hpp"
-#include "../Includes/WTSVariant.hpp"
-#include "../Includes/WTSContractInfo.hpp"
-#include "../Includes/WTSSessionInfo.hpp"
-#include "../Share/decimal.h"
-#include "../Share/fmtlib.h"
+#include "Share/TimeUtils.hpp"
+#include "Includes/WTSVariant.hpp"
+#include "Includes/WTSContractInfo.hpp"
+#include "Includes/WTSSessionInfo.hpp"
+#include "Share/decimal.h"
+#include "Share/fmtlib.h"
 USING_NS_WTP;
 
 class WtStockVWapExeUnit : public ExecuteUnit {

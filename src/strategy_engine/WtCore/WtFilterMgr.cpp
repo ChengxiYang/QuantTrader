@@ -1,8 +1,8 @@
 ﻿#include "WtFilterMgr.h"
 #include "EventNotifier.h"
 
-#include "../Share/CodeHelper.hpp"
-#include "../Includes/WTSVariant.hpp"
+#include "Share/CodeHelper.hpp"
+#include "Includes/WTSVariant.hpp"
 #include "WTSUtils/WTSCfgLoader.h"
 #include "WTSTools/WTSLogger.h"
 

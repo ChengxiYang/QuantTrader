@@ -1,12 +1,12 @@
 ﻿#include "WtTWapExeUnit.h"
 
-#include "../Share/TimeUtils.hpp"
-#include "../Includes/WTSVariant.hpp"
-#include "../Includes/WTSContractInfo.hpp"
-#include "../Share/decimal.h"
-#include "../Share/fmtlib.h"
+#include "Share/TimeUtils.hpp"
+#include "Includes/WTSVariant.hpp"
+#include "Includes/WTSContractInfo.hpp"
+#include "Share/decimal.h"
+#include "Share/fmtlib.h"
 /***---begin---23.5.18---zhaoyk***/
-#include "../Includes/WTSSessionInfo.hpp"
+#include "Includes/WTSSessionInfo.hpp"
 /***---end---23.5.18---zhaoyk***/
 #include <math.h>
 

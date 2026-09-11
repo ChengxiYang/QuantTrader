@@ -1,6 +1,6 @@
 ﻿#pragma once
 #include "IndexWorker.h"
-#include "../Share/threadpool.hpp"
+#include "Share/threadpool.hpp"
 #include <vector>
 
 class DataManager;

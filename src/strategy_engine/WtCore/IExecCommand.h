@@ -1,5 +1,5 @@
 ﻿#pragma once
-#include "../Includes/FasterDefs.h"
+#include "Includes/FasterDefs.h"
 #include <stdint.h>
 
 NS_WTP_BEGIN

@@ -1,8 +1,8 @@
 ﻿#pragma once
 #include "IDataCaster.h"
 #include <stdint.h>
-#include "../Includes/WTSStruct.h"
-#include "../Share/BoostMappingFile.hpp"
+#include "Includes/WTSStruct.h"
+#include "Share/BoostMappingFile.hpp"
 
 NS_WTP_BEGIN
 class WTSVariant;

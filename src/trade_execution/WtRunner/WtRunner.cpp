@@ -14,12 +14,12 @@
 #include "../../strategy_engine/WtCore/HftStraContext.h"
 #include "../../strategy_engine/WtCore/WtDiffExecuter.h"
 
-#include "../Includes/WTSVariant.hpp"
-#include "../Includes/WTSContractInfo.hpp"
+#include "Includes/WTSVariant.hpp"
+#include "Includes/WTSContractInfo.hpp"
 #include "../../WTSTools/WTSLogger.h"
 #include "../../WTSUtils/WTSCfgLoader.h"
 #include "../../WTSUtils/SignalHook.hpp"
-#include "../Share/StrUtil.hpp"
+#include "Share/StrUtil.hpp"
 
 
 const char* getBinDir()

@@ -24,11 +24,11 @@
 #include "WTSUtils/WTSCfgLoader.h"
 #include "WTSUtils/SignalHook.hpp"
 
-#include "../Share/TimeUtils.hpp"
-#include "../Share/ModuleHelper.hpp"
+#include "Share/TimeUtils.hpp"
+#include "Share/ModuleHelper.hpp"
 
-#include "../Includes/WTSContractInfo.hpp"
-#include "../Includes/WTSVariant.hpp"
+#include "Includes/WTSContractInfo.hpp"
+#include "Includes/WTSVariant.hpp"
 
 WtRtRunner::WtRtRunner()
 	: _data_store(NULL)

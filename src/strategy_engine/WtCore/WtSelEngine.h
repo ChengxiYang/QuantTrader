@@ -2,8 +2,8 @@
 #include "WtEngine.h"
 #include "WtExecMgr.h"
 
-#include "../Includes/FasterDefs.h"
-#include "../Includes/ISelStraCtx.h"
+#include "Includes/FasterDefs.h"
+#include "Includes/ISelStraCtx.h"
 
 #include <memory>
 

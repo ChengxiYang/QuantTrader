@@ -1,14 +1,14 @@
 ﻿#include "IndexWorker.h"
 #include "IndexFactory.h"
 
-#include "../Includes/IBaseDataMgr.h"
-#include "../Includes/WTSVariant.hpp"
-#include "../Includes/WTSContractInfo.hpp"
-#include "../Includes/WTSDataDef.hpp"
+#include "Includes/IBaseDataMgr.h"
+#include "Includes/WTSVariant.hpp"
+#include "Includes/WTSContractInfo.hpp"
+#include "Includes/WTSDataDef.hpp"
 
-#include "../Share/CodeHelper.hpp"
-#include "../Share/decimal.h"
-#include "../Share/TimeUtils.hpp"
+#include "Share/CodeHelper.hpp"
+#include "Share/decimal.h"
+#include "Share/TimeUtils.hpp"
 
 #include "WTSTools/WTSLogger.h"
 

@@ -1,8 +1,8 @@
 ﻿#include "ShmCaster.h"
-#include "../Includes/WTSVariant.hpp"
-#include "../Includes/WTSDataDef.hpp"
-#include "../Share/StdUtils.hpp"
-#include "../Share/BoostFile.hpp"
+#include "Includes/WTSVariant.hpp"
+#include "Includes/WTSDataDef.hpp"
+#include "Share/StdUtils.hpp"
+#include "Share/BoostFile.hpp"
 #include "WTSTools/WTSLogger.h"
 
 bool ShmCaster::init(WTSVariant* cfg)

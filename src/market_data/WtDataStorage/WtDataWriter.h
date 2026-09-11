@@ -1,11 +1,11 @@
 ﻿#pragma once
 #include "DataDefine.h"
 
-#include "../Includes/FasterDefs.h"
-#include "../Includes/IDataWriter.h"
-#include "../Share/StdUtils.hpp"
-#include "../Share/BoostMappingFile.hpp"
-#include "../Share/SpinMutex.hpp"
+#include "Includes/FasterDefs.h"
+#include "Includes/IDataWriter.h"
+#include "Share/StdUtils.hpp"
+#include "Share/BoostMappingFile.hpp"
+#include "Share/SpinMutex.hpp"
 
 #include <queue>
 #include <map>

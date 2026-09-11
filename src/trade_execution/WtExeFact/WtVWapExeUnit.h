@@ -3,8 +3,8 @@
 23.5.23--zhaoyv--VWAP
 */
 #include "WtOrdMon.h"
-#include "../Includes/ExecuteDefs.h"
-#include "../Share/StdUtils.hpp"
+#include "Includes/ExecuteDefs.h"
+#include "Share/StdUtils.hpp"
 #include <fstream>
 #include "rapidjson/document.h"
 USING_NS_WTP;

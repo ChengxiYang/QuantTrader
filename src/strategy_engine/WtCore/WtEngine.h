@@ -16,14 +16,14 @@
 #include "WtFilterMgr.h"
 
 
-#include "../Includes/FasterDefs.h"
-#include "../Includes/RiskMonDefs.h"
+#include "Includes/FasterDefs.h"
+#include "Includes/RiskMonDefs.h"
 
-#include "../Share/StdUtils.hpp"
-#include "../Share/DLLHelper.hpp"
+#include "Share/StdUtils.hpp"
+#include "Share/DLLHelper.hpp"
 
-#include "../Share/BoostFile.hpp"
-#include "../Share/SpinMutex.hpp"
+#include "Share/BoostFile.hpp"
+#include "Share/SpinMutex.hpp"
 
 
 NS_WTP_BEGIN

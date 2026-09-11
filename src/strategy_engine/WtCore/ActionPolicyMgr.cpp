@@ -9,10 +9,10 @@
  */
 #include "ActionPolicyMgr.h"
 
-#include "../Share/StdUtils.hpp"
+#include "Share/StdUtils.hpp"
 #include "WTSTools/WTSLogger.h"
 
-#include "../Includes/WTSVariant.hpp"
+#include "Includes/WTSVariant.hpp"
 #include "WTSUtils/WTSCfgLoader.h"
 
 USING_NS_WTP;

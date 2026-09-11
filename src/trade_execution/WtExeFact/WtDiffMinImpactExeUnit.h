@@ -7,7 +7,7 @@
  * 最小冲击执行单元
  */
 #pragma once
-#include "../Includes/ExecuteDefs.h"
+#include "Includes/ExecuteDefs.h"
 #include "WtOrdMon.h"
 
 USING_NS_WTP;

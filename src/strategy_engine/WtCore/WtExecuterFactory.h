@@ -1,7 +1,7 @@
 ﻿#pragma once
 #include "IExecCommand.h"
-#include "../Includes/ExecuteDefs.h"
-#include "../Share/DLLHelper.hpp"
+#include "Includes/ExecuteDefs.h"
+#include "Share/DLLHelper.hpp"
 
 #include <boost/core/noncopyable.hpp>
 

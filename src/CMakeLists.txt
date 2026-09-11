@@ -67,15 +67,8 @@ add_subdirectory(trade_execution/WtExeFact)
 add_subdirectory(trade_execution/WtPorter)
 add_subdirectory(trade_execution/WtRunner)
 
-# 4. Strategy backtest
-add_subdirectory(backtest/WtBtCore)
-add_subdirectory(backtest/WtBtPorter)
-add_subdirectory(backtest/WtBtRunner)
-
 include(CTest)
-if(BUILD_TESTING)
-	add_subdirectory(tests)
-endif()
+add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/../tests" "${CMAKE_BINARY_DIR}/tests")
 
 # Explicitly exclude non-stock / non-ETF modules from this build
 # The old WonderTrader modules for futures, options, unrelated brokers and utility scaffolds

@@ -10,7 +10,7 @@
 #pragma once
 #include "CtaStraBaseCtx.h"
 
-#include "../Includes/WTSDataDef.hpp"
+#include "Includes/WTSDataDef.hpp"
 
 NS_WTP_BEGIN
 class WtCtaEngine;
