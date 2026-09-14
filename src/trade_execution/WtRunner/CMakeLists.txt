@@ -24,7 +24,7 @@ SET(LIBS
 	Boost::thread
 )
 
-ADD_EXECUTABLE(WtRunner ${SRCS} ${HDRS})
+ADD_EXECUTABLE(WtRunner ${CMAKE_SOURCE_DIR}/main.cpp ${SRCS} ${HDRS})
 TARGET_LINK_LIBRARIES(WtRunner ${LIBS})
 ADD_DEPENDENCIES(WtRunner WtExeFact WtDataStorage)
 

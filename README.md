@@ -7,6 +7,8 @@
 - 生产源码按行情接收、策略引擎、交易执行三类模块组织，回测与单元测试统一放在项目根目录的 tests 中
 
 ## 目录结构
++ ***程序入口***
+  - [src/main.cpp](src/main.cpp)：WtRunner 实盘运行程序的入口
 + ***基础库***
   - Includes、Share、WTSUtils、WTSTools：公共数据结构、接口和工具能力
 + ***行情接收***
@@ -17,7 +19,22 @@
   - strategy_engine/WtCtaStraFact、WtSelStraFact：策略工厂
 + ***交易执行***
   - trade_execution/TraderXTP：沪深 A 股 / ETF 交易柜台适配
-  - trade_execution/WtExeFact、WtPorter、WtRunner：执行逻辑和运行入口
+  - trade_execution/WtExeFact、WtPorter、WtRunner：执行逻辑、动态库接口和运行编排
+
+## 启动入口与流程
+[src/main.cpp](src/main.cpp) 是生产可执行程序 `WtRunner` 的入口，并不是所有构建目标共用的入口。回测程序的入口在 [tests/backtest/WtBtRunner/WtBtRunner.cpp](tests/backtest/WtBtRunner/WtBtRunner.cpp)，单元测试也有独立入口。行情、策略、交易模块通过库和插件协作，不是依次启动的独立进程。
+
+1. `main()` 解析 `-l/--logcfg`、`-c/--config`、`-h/--help`；默认读取当前工作目录下的 `logcfg.yaml` 和 `config.yaml`，帮助模式输出参数说明后直接退出。
+2. 构造 `WtRunner`，安装信号处理；`init()` 初始化日志，并将启动工作目录设置为实例目录。
+3. `config()` 加载主配置和基础数据，随后依次初始化引擎、数据管理、交易动作策略、行情适配器、交易适配器、事件通知器、非 HFT 执行器及路由，最后加载策略工厂并创建策略上下文。引擎选择由 `env.name` 控制。主配置加载失败或交易动作策略初始化失败时，`main()` 返回 1；并非所有组件初始化失败都会向上传播。
+4. `run(false)` 依次执行 `_parsers.run()`、`_traders.run()`、`_engine->run()`。前两者发起行情和交易连接，并不表示连接或登录已同步完成；引擎启动相应的行情时钟及调度逻辑。
+5. 运行期间，行情进入策略引擎；CTA 策略产生目标仓位，经路由和执行器交给交易适配器，委托与成交回报再反馈给执行器和策略。HFT 策略上下文直接绑定交易适配器。主线程每 10 毫秒检查退出标志，收到停止信号后离开等待循环并返回。
+
+入口迁移不改变 `WtRunner` 目标名或输出目录。当前 Debug 构建的程序位于 `build/build_x64/Debug/bin/WtRunner/WtRunner`，仍由 [src/trade_execution/WtRunner/CMakeLists.txt](src/trade_execution/WtRunner/CMakeLists.txt) 显式编译根目录入口文件。
+
+运行时需准备完整配置、基础数据、策略插件及行情和交易模块。相对配置路径及 `cta/`、`hft/`、`executer/` 等插件目录依赖进程工作目录；指定 `-c` 不会自动切换到配置文件所在目录。当前仓库的 `config/` 为空，沪深行情源仍需单独接入，构建成功不等于已具备实盘运行条件。
+
+现有 `SEL` 分支仅完成引擎选择，`WtRunner::config()` 的非 HFT 策略初始化及执行器、路由绑定仍使用 CTA 路径，不能据此认为 SEL 启动链已经完整接通。本次入口迁移不修改这些既有行为。
 
 ## 测试单元
 项目根目录的 `tests` 与 `src` 平级，统一组织回测和单元测试：
