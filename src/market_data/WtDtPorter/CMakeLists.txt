@@ -19,31 +19,18 @@ SET(LIBS
 	WtDtCore
 	WTSTools
 	WTSUtils
-	)
-IF(MSVC)
-ELSE(GNUCC)
-	LIST(APPEND LIBS
-		dl
-		pthread
-		Boost::filesystem
-		Boost::thread
-		)
-	IF(WIN32)
-		LIST(APPEND LIBS
-			ws2_32 iconv
-		)
-	ENDIF()
-ENDIF()
+	dl
+	pthread
+	Boost::filesystem
+	Boost::thread
+)
 
 TARGET_LINK_LIBRARIES(WtDtPorter ${LIBS})
 add_dependencies(WtDtPorter WtDataStorage)
-IF (MSVC)
-ELSE (GNUCC)
-	SET_TARGET_PROPERTIES(WtDtPorter PROPERTIES
-		CXX_VISIBILITY_PRESET hidden
-		VISIBILITY_INLINES_HIDDEN 1
-        LINK_FLAGS_RELEASE -s)
-ENDIF ()
+SET_TARGET_PROPERTIES(WtDtPorter PROPERTIES
+	CXX_VISIBILITY_PRESET hidden
+	VISIBILITY_INLINES_HIDDEN 1
+	LINK_FLAGS_RELEASE -s)
 
 file(MAKE_DIRECTORY ${LIBRARY_OUTPUT_PATH}/parsers/)
 add_custom_command(TARGET WtDtPorter POST_BUILD

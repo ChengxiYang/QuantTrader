@@ -33,12 +33,23 @@ tests/
     CMakeLists.txt
     EventNotifierTest.cpp
     TestMsgQue.cpp
+    XtpModuleTest.cpp
 ```
 
 - `tests/backtest`：回测核心、动态库接口和运行入口，保持默认构建。
 - `tests/unit`：自动化单元测试，由 `BUILD_TESTING` 控制并通过 CTest 运行。
 - CMake 入口仍为 `src/CMakeLists.txt`，由其引入 `tests/CMakeLists.txt`；测试单元不单独配置，复用生产目标与依赖。
 - 测试单元的构建中间文件位于构建目录下的 `tests`，单元测试产物位于 `tests/unit`；回测产物的原有输出路径保持不变。
+- 启用 XTP 时，CTest 额外检查插件构建目录及 WtRunner、WtPorter 部署目录中的动态库加载和工厂符号，不连接柜台。
+
+## 编译环境与 XTP SDK
+- 仅支持 Linux 和 GCC/G++，使用 C++17、CMake 3.16 及以上版本；其他平台或编译器会在配置阶段报错。
+- Boost 需要 1.90 及以上版本的 filesystem、thread 组件；现有 VS Code 配置使用 `build/boost-1.92.0` 中的安装。
+- 所有目标统一使用顶层 PIC 设置，默认启用 `WT_WARNINGS_AS_ERRORS`。
+- XTP SDK 默认放在项目根目录的 `deps` 中，包含 `xtp_trader_api.h`、其配套头文件及 Linux 动态库 `libxtptraderapi.so`。当前提供的动态库为 x86-64，必须与编译和部署架构匹配。
+- `XTP_SDK_DIR` 可指定其他 SDK 目录。首次配置时，头文件和动态库均存在则默认启用 `WT_BUILD_XTP`；也可显式关闭。启用后缺少头文件或动态库会在配置阶段报错。
+- 当前 VS Code 配置已显式设置 `XTP_SDK_DIR` 为根目录 `deps` 并启用 `WT_BUILD_XTP`，避免沿用旧构建缓存中的 SDK 路径或关闭状态。使用 CMake Tools 的 Configure、Build 和测试入口即可构建验证。
+- 适配器保持运行时加载 SDK，不直接链接其工厂函数。构建会将 `libxtptraderapi.so` 放在 `libTraderXTP.so` 旁边，并将两者复制到 WtRunner、WtPorter 的 `traders` 目录；SDK 或插件更新会触发重新复制。部署时需要一起携带这两个动态库及其系统依赖。
 
 ## 公共头文件
 - `src/Includes` 和 `src/Share` 是公共接口、数据结构与共享工具的唯一存放位置。

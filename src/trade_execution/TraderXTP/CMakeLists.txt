@@ -18,34 +18,23 @@ LINK_DIRECTORIES(${LNKS})
 ADD_LIBRARY(TraderXTP SHARED ${SRC})
 target_include_directories(TraderXTP PRIVATE "${XTP_SDK_DIR}")
 
-IF(MSVC)
-	SET(LIBS
-		ws2_32
-		)
-ELSE(GNUCC)
-	IF(WIN32)
-		SET(LIBS
-			dl
-			Boost::thread
-			Boost::filesystem
-			ws2_32
-			)
-	ELSE(UNIX)
-		SET(LIBS
-			dl
-			Boost::thread
-			Boost::filesystem
-			)
-	ENDIF()
-ENDIF()
+SET(LIBS
+	${CMAKE_DL_LIBS}
+	Threads::Threads
+	Boost::thread
+	Boost::filesystem
+)
 TARGET_LINK_LIBRARIES(TraderXTP ${LIBS})
 
-IF (MSVC)
-ELSE (GNUCC)
-	SET_TARGET_PROPERTIES(TraderXTP PROPERTIES
-		CXX_VISIBILITY_PRESET hidden
-		C_VISIBILITY_PRESET hidden
-		VISIBILITY_INLINES_HIDDEN 1
-        LINK_FLAGS_RELEASE -s)
-ENDIF ()
+SET_TARGET_PROPERTIES(TraderXTP PROPERTIES
+	CXX_VISIBILITY_PRESET hidden
+	C_VISIBILITY_PRESET hidden
+	VISIBILITY_INLINES_HIDDEN 1
+	LINK_FLAGS_RELEASE -s
+	LINK_DEPENDS "${XTP_SDK_DIR}/libxtptraderapi.so")
+
+add_custom_command(TARGET TraderXTP POST_BUILD
+	COMMAND ${CMAKE_COMMAND} -E copy_if_different
+		"${XTP_SDK_DIR}/libxtptraderapi.so" "$<TARGET_FILE_DIR:TraderXTP>/"
+	VERBATIM)
 

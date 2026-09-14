@@ -15,18 +15,10 @@ SET(LIBS
 	WtBtCore
 	WTSTools
 	WTSUtils
+	Boost::filesystem
+	pthread
+	dl
 )
-
-IF(MSVC)
-ELSE(GNUCC)
-	LIST(APPEND LIBS
-		Boost::filesystem
-		pthread
-		dl)
-	if(WIN32)
-		LIST(APPEND LIBS iconv)
-	ENDIF()
-ENDIF()
 
 #添加源码
 file(GLOB SRCS *.cpp)
@@ -36,11 +28,8 @@ file(GLOB HDRS *.h)
 ADD_EXECUTABLE(WtBtRunner ${SRCS} ${HDRS})
 TARGET_LINK_LIBRARIES(WtBtRunner ${LIBS})
 
-IF (MSVC)
-ELSE (GNUCC)
-	SET_TARGET_PROPERTIES(WtBtRunner PROPERTIES
-        LINK_FLAGS_RELEASE -s)
-ENDIF ()
+SET_TARGET_PROPERTIES(WtBtRunner PROPERTIES
+	LINK_FLAGS_RELEASE -s)
 
 #SET(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/build_${PLATFORM}/${CMAKE_BUILD_TYPE}/bin/WtBtPorter)
 #ADD_EXECUTABLE(TestBtPorter ../TestBtPorter/TestBtPorter.cpp)

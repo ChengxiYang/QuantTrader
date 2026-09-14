@@ -18,31 +18,18 @@ SET(LIBS
 	WtCore
 	WTSTools
 	WTSUtils
-	)
-
-IF (MSVC)
-	LIST(APPEND LIBS ws2_32)
-ELSE(GNUCC)
-	LIST(APPEND LIBS
-		dl
-		pthread
-		Boost::filesystem
-		Boost::thread)
-	IF(WIN32)
-		LIST(APPEND LIBS
-			ws2_32 iconv)
-	ENDIF()
-ENDIF()
+	dl
+	pthread
+	Boost::filesystem
+	Boost::thread
+)
 
 ADD_EXECUTABLE(WtRunner ${SRCS} ${HDRS})
 TARGET_LINK_LIBRARIES(WtRunner ${LIBS})
 ADD_DEPENDENCIES(WtRunner WtExeFact WtDataStorage)
 
-IF (MSVC)
-ELSE (GNUCC)
-	SET_TARGET_PROPERTIES(WtRunner PROPERTIES
-        LINK_FLAGS_RELEASE -s)
-ENDIF ()
+SET_TARGET_PROPERTIES(WtRunner PROPERTIES
+	LINK_FLAGS_RELEASE -s)
 
 file(MAKE_DIRECTORY ${EXECUTABLE_OUTPUT_PATH}/parsers/)
 file(MAKE_DIRECTORY ${EXECUTABLE_OUTPUT_PATH}/traders/)
@@ -59,10 +46,15 @@ add_custom_command(TARGET WtRunner POST_BUILD
 
 if(TARGET TraderXTP)
 	add_dependencies(WtRunner TraderXTP)
+	set_property(TARGET WtRunner APPEND PROPERTY LINK_DEPENDS
+		"$<TARGET_FILE:TraderXTP>" "${XTP_SDK_DIR}/libxtptraderapi.so")
 	add_custom_command(TARGET WtRunner POST_BUILD
 		COMMAND ${CMAKE_COMMAND} -E
 		copy_if_different $<TARGET_FILE:TraderXTP> ${EXECUTABLE_OUTPUT_PATH}/traders/
-		COMMENT "copy XTP trader module")
+		COMMAND ${CMAKE_COMMAND} -E
+		copy_if_different "${XTP_SDK_DIR}/libxtptraderapi.so" ${EXECUTABLE_OUTPUT_PATH}/traders/
+		COMMENT "copy XTP trader module and SDK"
+		VERBATIM)
 endif()
 
 

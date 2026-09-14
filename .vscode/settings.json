@@ -2,6 +2,8 @@
     "cmake.sourceDirectory": "${workspaceFolder}/src",
     "cmake.parallelJobs": 2,
     "cmake.configureSettings": {
-        "Boost_DIR": "${workspaceFolder}/build/boost-1.92.0/lib/cmake/Boost-1.92.0"
+        "Boost_DIR": "${workspaceFolder}/build/boost-1.92.0/lib/cmake/Boost-1.92.0",
+        "XTP_SDK_DIR": "${workspaceFolder}/deps",
+        "WT_BUILD_XTP": "ON"
     }
 }
