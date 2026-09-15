@@ -1,11 +1,11 @@
 cmake_minimum_required(VERSION 3.16)
 
-project(WonderTrader LANGUAGES C CXX)
+project(QuantTrader LANGUAGES C CXX)
 
 if(NOT CMAKE_SYSTEM_NAME STREQUAL "Linux" OR
 	NOT CMAKE_C_COMPILER_ID STREQUAL "GNU" OR
 	NOT CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
-	message(FATAL_ERROR "WonderTrader requires Linux with GCC/G++")
+	message(FATAL_ERROR "QuantTrader requires Linux with GCC/G++")
 endif()
 
 set(CMAKE_CXX_STANDARD 17)
@@ -47,8 +47,8 @@ add_subdirectory(market_data/WtDtPorter)
 
 # 2. Strategy engine
 add_subdirectory(strategy_engine/WtCore)
-add_subdirectory(strategy_engine/WtCtaStraFact)
-add_subdirectory(strategy_engine/WtSelStraFact)
+add_subdirectory(strategy_engine/cta/WtCtaStraFact)
+add_subdirectory(strategy_engine/sel/WtSelStraFact)
 
 # 3. Trade execution
 set(XTP_SDK_DIR "${CMAKE_SOURCE_DIR}/../deps" CACHE PATH "XTP SDK headers and libxtptraderapi.so directory")
@@ -69,7 +69,7 @@ else()
 endif()
 add_subdirectory(trade_execution/WtExeFact)
 add_subdirectory(trade_execution/WtPorter)
-add_subdirectory(trade_execution/WtRunner)
+add_subdirectory(trade_execution/QtRunner)
 
 include(CTest)
 add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/../tests" "${CMAKE_BINARY_DIR}/tests")

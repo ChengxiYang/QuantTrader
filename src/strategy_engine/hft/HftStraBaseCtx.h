@@ -16,7 +16,7 @@
 
 #include <boost/circular_buffer.hpp>
 
-#include "ITrdNotifySink.h"
+#include "strategy_engine/WtCore/ITrdNotifySink.h"
 
 NS_WTP_BEGIN
 

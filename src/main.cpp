@@ -8,7 +8,7 @@
  * /brief 
  */
 
-#include "trade_execution/WtRunner/WtRunner.h"
+#include "trade_execution/QtRunner/QtRunner.h"
 
 #include "WTSTools/WTSLogger.h"
 
@@ -35,7 +35,7 @@ int main(int argc, char* argv[])
 	else
 		filename = "./logcfg.yaml";
 
-	WtRunner runner;
+	QtRunner runner;
 	runner.init(filename);
 
 	if (cParam->exists())

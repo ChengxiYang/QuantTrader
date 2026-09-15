@@ -9,7 +9,7 @@
  */
 #include "CtaStraBaseCtx.h"
 #include "WtCtaEngine.h"
-#include "WtHelper.h"
+#include "strategy_engine/WtCore/WtHelper.h"
 
 #include <exception>
 #include <rapidjson/document.h>

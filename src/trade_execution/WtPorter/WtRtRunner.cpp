@@ -16,9 +16,9 @@
 #include "ExpExecuter.h"
 
 #include "../../strategy_engine/WtCore/WtHelper.h"
-#include "../../strategy_engine/WtCore/CtaStraContext.h"
-#include "../../strategy_engine/WtCore/HftStraContext.h"
-#include "../../strategy_engine/WtCore/SelStraContext.h"
+#include "../../strategy_engine/cta/CtaStraContext.h"
+#include "../../strategy_engine/hft/HftStraContext.h"
+#include "../../strategy_engine/sel/SelStraContext.h"
 
 #include "WTSTools/WTSLogger.h"
 #include "WTSUtils/WTSCfgLoader.h"

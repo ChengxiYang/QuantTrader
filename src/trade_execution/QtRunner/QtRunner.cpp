@@ -7,11 +7,11 @@
  * 
  * /brief 
  */
-#include "WtRunner.h"
+#include "QtRunner.h"
 
 #include "../../strategy_engine/WtCore/WtHelper.h"
-#include "../../strategy_engine/WtCore/CtaStraContext.h"
-#include "../../strategy_engine/WtCore/HftStraContext.h"
+#include "../../strategy_engine/cta/CtaStraContext.h"
+#include "../../strategy_engine/hft/HftStraContext.h"
 #include "../../strategy_engine/WtCore/WtDiffExecuter.h"
 
 #include "Includes/WTSVariant.hpp"
@@ -37,7 +37,7 @@ const char* getBinDir()
 
 
 
-WtRunner::WtRunner()
+QtRunner::QtRunner()
 	: _data_store(NULL)
 	, _is_hft(false)
 	, _is_sel(false)
@@ -52,11 +52,11 @@ WtRunner::WtRunner()
 }
 
 
-WtRunner::~WtRunner()
+QtRunner::~QtRunner()
 {
 }
 
-void WtRunner::init(const std::string& filename)
+void QtRunner::init(const std::string& filename)
 {
 	WTSLogger::init(filename.c_str());
 
@@ -68,7 +68,7 @@ void WtRunner::init(const std::string& filename)
 	}
 }
 
-bool WtRunner::config(const std::string& filename)
+bool QtRunner::config(const std::string& filename)
 {
 	_config = WTSCfgLoader::load_from_file(filename);
 	if(_config == NULL)
@@ -283,7 +283,7 @@ bool WtRunner::config(const std::string& filename)
 	return true;
 }
 
-bool WtRunner::initCtaStrategies()
+bool QtRunner::initCtaStrategies()
 {
 	WTSVariant* cfg = _config->get("strategies");
 	if (cfg == NULL || cfg->type() != WTSVariant::VT_Object)
@@ -315,7 +315,7 @@ bool WtRunner::initCtaStrategies()
 	return true;
 }
 
-bool WtRunner::initHftStrategies()
+bool QtRunner::initHftStrategies()
 {
 	WTSVariant* cfg = _config->get("strategies");
 	if (cfg == NULL || cfg->type() != WTSVariant::VT_Object)
@@ -365,7 +365,7 @@ bool WtRunner::initHftStrategies()
 }
 
 
-bool WtRunner::initEngine()
+bool QtRunner::initEngine()
 {
 	WTSVariant* cfg = _config->get("env");
 	if (cfg == NULL)
@@ -411,12 +411,12 @@ bool WtRunner::initEngine()
 	return true;
 }
 
-bool WtRunner::initActionPolicy()
+bool QtRunner::initActionPolicy()
 {
 	return _act_policy.init(_config->getCString("bspolicy"));
 }
 
-bool WtRunner::initDataMgr()
+bool QtRunner::initDataMgr()
 {
 	WTSVariant*cfg = _config->get("data");
 	if (cfg == NULL)
@@ -428,7 +428,7 @@ bool WtRunner::initDataMgr()
 	return true;
 }
 
-bool WtRunner::initParsers(WTSVariant* cfgParser)
+bool QtRunner::initParsers(WTSVariant* cfgParser)
 {
 	if (cfgParser == NULL)
 		return false;
@@ -461,7 +461,7 @@ bool WtRunner::initParsers(WTSVariant* cfgParser)
 	return true;
 }
 
-bool WtRunner::initExecuters(WTSVariant* cfgExecuter)
+bool QtRunner::initExecuters(WTSVariant* cfgExecuter)
 {
 	if (cfgExecuter == NULL || cfgExecuter->type() != WTSVariant::VT_Array)
 		return false;
@@ -551,7 +551,7 @@ bool WtRunner::initExecuters(WTSVariant* cfgExecuter)
 	return true;
 }
 
-bool WtRunner::initTraders(WTSVariant* cfgTrader)
+bool QtRunner::initTraders(WTSVariant* cfgTrader)
 {
 	if (cfgTrader == NULL || cfgTrader->type() != WTSVariant::VT_Array)
 		return false;
@@ -578,7 +578,7 @@ bool WtRunner::initTraders(WTSVariant* cfgTrader)
 	return true;
 }
 
-void WtRunner::run(bool bAsync /* = false */)
+void QtRunner::run(bool bAsync /* = false */)
 {
 	try
 	{
@@ -613,12 +613,12 @@ const char* LOG_TAGS[] = {
 	"none"
 };
 
-void WtRunner::handleLogAppend(WTSLogLevel ll, const char* msg)
+void QtRunner::handleLogAppend(WTSLogLevel ll, const char* msg)
 {
 	_notifier.notify_log(LOG_TAGS[ll - 100], msg);
 }
 
-bool WtRunner::initEvtNotifier()
+bool QtRunner::initEvtNotifier()
 {
 	WTSVariant* cfg = _config->get("notifier");
 	if (cfg == NULL || cfg->type() != WTSVariant::VT_Object)

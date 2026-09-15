@@ -8,8 +8,8 @@
  * \brief 
  */
 #pragma once
-#include "WtEngine.h"
-#include "WtLocalExecuter.h"
+#include "strategy_engine/WtCore/WtEngine.h"
+#include "strategy_engine/WtCore/WtLocalExecuter.h"
 
 #include "Includes/IHftStraCtx.h"
 

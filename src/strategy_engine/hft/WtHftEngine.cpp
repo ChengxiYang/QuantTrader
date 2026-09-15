@@ -11,9 +11,9 @@
 
 #include "WtHftEngine.h"
 #include "WtHftTicker.h"
-#include "WtDtMgr.h"
-#include "TraderAdapter.h"
-#include "WtHelper.h"
+#include "strategy_engine/WtCore/WtDtMgr.h"
+#include "strategy_engine/WtCore/TraderAdapter.h"
+#include "strategy_engine/WtCore/WtHelper.h"
 
 #include "Share/decimal.h"
 #include "Share/CodeHelper.hpp"

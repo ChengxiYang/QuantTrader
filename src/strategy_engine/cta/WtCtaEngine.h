@@ -10,8 +10,8 @@
 #pragma once
 #include "Includes/ICtaStraCtx.h"
 #include "Share/threadpool.hpp"
-#include "WtExecMgr.h"
-#include "WtEngine.h"
+#include "strategy_engine/WtCore/WtExecMgr.h"
+#include "strategy_engine/WtCore/WtEngine.h"
 
 NS_WTP_BEGIN
 class WTSVariant;

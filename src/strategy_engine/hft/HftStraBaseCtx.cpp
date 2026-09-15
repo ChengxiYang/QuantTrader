@@ -9,8 +9,8 @@
  */
 #include "HftStraBaseCtx.h"
 #include "WtHftEngine.h"
-#include "TraderAdapter.h"
-#include "WtHelper.h"
+#include "strategy_engine/WtCore/TraderAdapter.h"
+#include "strategy_engine/WtCore/WtHelper.h"
 
 #include "Includes/WTSContractInfo.hpp"
 #include "Includes/IBaseDataMgr.h"

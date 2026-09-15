@@ -10,11 +10,11 @@
 #define WIN32_LEAN_AND_MEAN
 
 #include "WtCtaEngine.h"
-#include "WtDtMgr.h"
+#include "strategy_engine/WtCore/WtDtMgr.h"
 #include "WtCtaTicker.h"
-#include "WtHelper.h"
-#include "TraderAdapter.h"
-#include "EventNotifier.h"
+#include "strategy_engine/WtCore/WtHelper.h"
+#include "strategy_engine/WtCore/TraderAdapter.h"
+#include "strategy_engine/WtCore/EventNotifier.h"
 
 #include "Share/CodeHelper.hpp"
 #include "Includes/WTSVariant.hpp"

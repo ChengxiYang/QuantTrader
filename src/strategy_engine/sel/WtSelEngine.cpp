@@ -1,8 +1,8 @@
 ﻿#include "WtSelEngine.h"
-#include "WtDtMgr.h"
+#include "strategy_engine/WtCore/WtDtMgr.h"
 #include "WtSelTicker.h"
-#include "TraderAdapter.h"
-#include "WtHelper.h"
+#include "strategy_engine/WtCore/TraderAdapter.h"
+#include "strategy_engine/WtCore/WtHelper.h"
 
 #include "WTSTools/WTSLogger.h"
 #include "Share/TimeUtils.hpp"

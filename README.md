@@ -15,8 +15,11 @@
   - market_data/WtDtCore、WtDtHelper、WtDtPorter：行情接收和转发
   - market_data/WtDataStorage：行情数据存储
 + ***策略引擎***
-  - strategy_engine/WtCore：核心策略运行时
-  - strategy_engine/WtCtaStraFact、WtSelStraFact：策略工厂
+  - strategy_engine/WtCore：共享引擎、数据管理、适配器及执行设施
+  - strategy_engine/cta：CTA 运行时、WtCtaStraFact 工厂及 DualThrust 示例
+  - strategy_engine/hft：HFT 事件驱动运行框架，暂无具体示例策略
+  - strategy_engine/sel：SEL 运行时、WtSelStraFact 工厂及 DualThrustSelection 示例
+  - [策略说明](STRATEGIES.md)：实际类别、算法逻辑、参数、加载方式及既有限制
 + ***交易执行***
   - trade_execution/TraderXTP：沪深 A 股 / ETF 交易柜台适配
   - trade_execution/WtExeFact、WtPorter、WtRunner：执行逻辑、动态库接口和运行编排

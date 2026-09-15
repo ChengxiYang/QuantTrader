@@ -8,7 +8,7 @@
  * \brief 
  */
 #pragma once
-#include "../../strategy_engine/WtCore/CtaStraBaseCtx.h"
+#include "../../strategy_engine/cta/CtaStraBaseCtx.h"
 
 USING_NS_WTP;
 

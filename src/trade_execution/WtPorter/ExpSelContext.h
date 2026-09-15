@@ -1,5 +1,5 @@
 ﻿#pragma once
-#include "../../strategy_engine/WtCore/SelStraBaseCtx.h"
+#include "../../strategy_engine/sel/SelStraBaseCtx.h"
 
 USING_NS_WTP;
 

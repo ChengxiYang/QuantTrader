@@ -9,7 +9,7 @@
 */
 #include "SelStraBaseCtx.h"
 #include "WtSelEngine.h"
-#include "WtHelper.h"
+#include "strategy_engine/WtCore/WtHelper.h"
 
 #include <exception>
 #include <rapidjson/document.h>

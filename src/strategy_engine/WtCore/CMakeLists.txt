@@ -9,8 +9,8 @@ SET(CMAKE_CXX_STANDARD 17)
 SET(LIBRARY_OUTPUT_PATH  ${CMAKE_BINARY_DIR}/build_${PLATFORM}/${CMAKE_BUILD_TYPE}/libs)
 
 #7. 添加源码
-file(GLOB SRCS *.cpp)
-file(GLOB HDRS *.h)
+file(GLOB SRCS CONFIGURE_DEPENDS *.cpp ../cta/*.cpp ../hft/*.cpp ../sel/*.cpp)
+file(GLOB HDRS CONFIGURE_DEPENDS *.h ../cta/*.h ../hft/*.h ../sel/*.h)
 
 INCLUDE_DIRECTORIES(${INCS})
 LINK_DIRECTORIES(${LNKS})

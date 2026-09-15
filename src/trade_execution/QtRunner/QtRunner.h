@@ -14,13 +14,13 @@
 #include "Includes/ILogHandler.h"
 
 #include "../../strategy_engine/WtCore/EventNotifier.h"
-#include "../../strategy_engine/WtCore/CtaStrategyMgr.h"
-#include "../../strategy_engine/WtCore/HftStrategyMgr.h"
-#include "../../strategy_engine/WtCore/SelStrategyMgr.h"
+#include "../../strategy_engine/cta/CtaStrategyMgr.h"
+#include "../../strategy_engine/hft/HftStrategyMgr.h"
+#include "../../strategy_engine/sel/SelStrategyMgr.h"
 
-#include "../../strategy_engine/WtCore/WtCtaEngine.h"
-#include "../../strategy_engine/WtCore/WtHftEngine.h"
-#include "../../strategy_engine/WtCore/WtSelEngine.h"
+#include "../../strategy_engine/cta/WtCtaEngine.h"
+#include "../../strategy_engine/hft/WtHftEngine.h"
+#include "../../strategy_engine/sel/WtSelEngine.h"
 #include "../../strategy_engine/WtCore/WtLocalExecuter.h"
 #include "../../strategy_engine/WtCore/WtDistExecuter.h"
 #include "../../strategy_engine/WtCore/TraderAdapter.h"
@@ -38,11 +38,11 @@ NS_WTP_END
 
 USING_NS_WTP;
 
-class WtRunner : public ILogHandler
+class QtRunner : public ILogHandler
 {
 public:
-	WtRunner();
-	~WtRunner();
+	QtRunner();
+	~QtRunner();
 
 public:
 	void init(const std::string& filename);

@@ -9,7 +9,7 @@
  */
 #include "ParserAdapter.h"
 #include "WtEngine.h"
-#include "WtCtaTicker.h"
+#include "strategy_engine/cta/WtCtaTicker.h"
 #include "WtHelper.h"
 
 #include "Share/CodeHelper.hpp"
