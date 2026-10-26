@@ -1,11 +1,12 @@
-﻿/*!
- * /file WtRunner.h
- * /project	WonderTrader
- *
- * /author Wesley
- * /date 2020/03/30
- * 
- * /brief 
+﻿/*
+ * @/*!: 
+ * @ * /file: {filename}
+ * @ * /project: QuantTrader
+ * @ * : 
+ * @ * /author: Charles Yang
+ * @ * /date: {date}
+ * @ * /brief: 
+ * @ */: 
  */
 #pragma once
 #include <string>

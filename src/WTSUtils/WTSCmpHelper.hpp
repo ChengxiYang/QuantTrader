@@ -1,13 +1,4 @@
-﻿/*!
- * \file WTSCmpHelper.hpp
- * \project	WonderTrader
- *
- * \author Wesley
- * \date 2020/03/30
- * 
- * \brief 数据压缩辅助类,利用zstdlib压缩
- */
-#pragma once
+﻿#pragma once
 #include <string>
 #include <stdint.h>
 

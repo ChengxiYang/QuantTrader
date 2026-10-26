@@ -5,5 +5,16 @@
         "Boost_DIR": "${workspaceFolder}/build/boost-1.92.0/lib/cmake/Boost-1.92.0",
         "XTP_SDK_DIR": "${workspaceFolder}/deps",
         "WT_BUILD_XTP": "ON"
+    },
+    "fileheader.customMade": {
+        "/*!": "",
+        " * /file": "{filename}",
+        " * /project": "QuantTrader",
+        " * ": "",
+        " * /author": "Charles Yang",
+        " * /date": "{date}",
+        " * ": "",
+        " * /brief": "",
+        " */": ""
     }
 }
